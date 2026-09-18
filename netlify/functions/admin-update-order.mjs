@@ -9,9 +9,10 @@ export default async (req) => {
     const status = clean(body.status,40);
     if (!STATUSES.includes(status)) return json({ error:'Invalid status' },400);
     const store = ORDERS_STORE();
-    const order = await store.get(id,{type:'json',consistency:'strong'});
+    const order = await store.get(id,{type:'json'});
     if (!order) return json({ error:'Order not found' },404);
-    if (order.paymentStatus !== 'paid' && status !== 'cancelled') return json({ error:'This order is not confirmed as paid yet.' },409);
+    const canFulfill = ['paid','pay_on_delivery','pay_on_pickup'].includes(order.paymentStatus);
+    if (!canFulfill && status !== 'cancelled') return json({ error:'This order is not ready for fulfillment yet.' },409);
     order.status = status; order.updatedAt = new Date().toISOString();
     await store.setJSON(id, order, { metadata:{status,createdAt:order.createdAt} });
     await sendEmail({
