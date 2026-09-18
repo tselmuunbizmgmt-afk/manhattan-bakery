@@ -5,7 +5,7 @@ export default async (req) => {
   const token = clean(url.searchParams.get('token'), 100);
   const store = SUBSCRIBERS_STORE();
   const key = subscriberKey(email);
-  const entry = await store.get(key, { type:'json', consistency:'strong' });
+  const entry = await store.get(key, { type:'json' });
   if (entry && entry.token === token) {
     entry.active = false; entry.updatedAt = new Date().toISOString();
     await store.setJSON(key, entry);
