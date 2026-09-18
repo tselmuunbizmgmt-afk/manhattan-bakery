@@ -1,122 +1,466 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Manhattan Bakery | Ulaanbaatar</title>
-<meta name="description" content="New York-inspired bakery in Ulaanbaatar. Signature muffins, weekly drops, and more coming soon.">
-<link rel="canonical" href="https://manhattanbakery.online/">
-<meta name="theme-color" content="#070707">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Manhattan Bakery | New York-Inspired Bakery in Ulaanbaatar</title>
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+<meta name="theme-color" content="#070707" />
+<meta name="application-name" content="The Manhattan Bakery" />
+<link rel="canonical" href="https://manhattanbakery.online/" />
+<meta property="og:url" content="https://manhattanbakery.online/" />
+<meta property="og:image" content="https://manhattanbakery.online/manhattan-bakery-logo-hd.png" />
+<meta name="twitter:image" content="https://manhattanbakery.online/manhattan-bakery-logo-hd.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="The Manhattan Bakery" />
+<meta property="og:title" content="The Manhattan Bakery — New York-Inspired Bakery in Ulaanbaatar" />
+<meta property="og:description" content="New York roots. Ulaanbaatar made. Signature muffins, pastries, specialty coffee and weekly flavor drops." />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="mn_MN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Manhattan Bakery — Ulaanbaatar" />
+<meta name="twitter:description" content="A little taste of Manhattan in every sip & bite." />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Bakery",
+  "name": "The Manhattan Bakery",
+  "url": "https://manhattanbakery.online/",
+  "logo": "https://manhattanbakery.online/manhattan-bakery-logo-hd.png",
+  "description": "New York-inspired bakery in Ulaanbaatar featuring signature muffins, pastries, specialty coffee, weekly flavor drops, and vegan and organic options.",
+  "areaServed": {
+    "@type": "City",
+    "name": "Ulaanbaatar"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ulaanbaatar",
+    "addressCountry": "MN"
+  },
+  "servesCuisine": ["Bakery", "Coffee", "New York-inspired pastries"],
+  "priceRange": "$$$"
+}
+</script>
+
+<meta name="description" content="The Manhattan Bakery is a New York-inspired bakery in Ulaanbaatar serving signature muffins, pastries, specialty coffee, weekly flavor drops, and vegan and organic options." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=League+Spartan:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#070707;--panel:#101010;--line:#272727;--ink:#f5f1e9;--muted:#969696;--cream:#eee9df}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.hidden{display:none!important}
-.nav{position:fixed;top:0;left:0;right:0;height:76px;z-index:50;display:grid;grid-template-columns:auto 1fr auto;align-items:center;padding:0 4.5vw;background:rgba(7,7,7,.86);backdrop-filter:blur(18px);border-bottom:1px solid #1c1c1c}
-.brand img{width:148px;height:58px;object-fit:contain}.links{justify-self:center;display:flex;gap:26px;text-transform:uppercase;font-size:10px;letter-spacing:.17em;color:#aaa}.actions{display:flex;gap:8px}.pill{border:1px solid #343434;background:#111;color:#fff;border-radius:999px;padding:11px 14px;font-size:10px;text-transform:uppercase;letter-spacing:.12em}.light{background:var(--cream);color:#070707;border-color:var(--cream);font-weight:700}
-.hero{min-height:100vh;padding:122px 5vw 70px;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 28%,rgba(255,255,255,.07),transparent 27%),linear-gradient(#090909,#050505)}
-.hero-inner{width:min(1140px,100%)}.kicker{text-transform:uppercase;letter-spacing:.42em;font-size:10px;color:#aaa;margin-bottom:28px}.hero-logo{width:min(720px,84vw);margin:0 auto 46px}.hero-logo img{width:100%;display:block}.hero h1{font-size:clamp(46px,7vw,98px);line-height:.9;letter-spacing:-.045em;margin:0 auto;max-width:1040px}.slogan{font-family:Georgia,serif;font-style:italic;font-size:clamp(22px,3vw,36px);color:#ddd6ca;margin:30px 0 14px}.hero p{max-width:680px;margin:auto;color:#969696;line-height:1.8}.hero-buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:32px}
-.btn{border:1px solid #e9e5dc;background:transparent;color:#fff;border-radius:999px;padding:15px 22px;text-transform:uppercase;letter-spacing:.14em;font-size:10px;font-weight:700}.btn.primary{background:#ece8de;color:#070707}
-.marquee{border-block:1px solid #1e1e1e;overflow:hidden;background:#0c0c0c}.marquee div{white-space:nowrap;padding:15px;font-size:15px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#d7d2c9}
-.section{padding:92px 5vw}.eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:9px;color:#757575}.section h2{font-size:clamp(38px,6vw,76px);line-height:.95;letter-spacing:-.04em;margin:12px 0}.lead{max-width:680px;color:#8d8d8d;line-height:1.8}
-.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:40px}.card{border:1px solid #252525;border-radius:22px;background:linear-gradient(145deg,#141414,#0c0c0c);padding:24px;min-height:290px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}.card:before{content:"";position:absolute;inset:auto -20% 42% -20%;height:160px;background:radial-gradient(circle,rgba(255,255,255,.08),transparent 67%)}.num{position:absolute;top:18px;right:18px;color:#494949;font-size:11px}.card h3{font-size:22px;margin:0 0 8px}.card p{color:#777;font-size:12px;line-height:1.65}.price{margin-top:15px;font-weight:700}.add{margin-top:16px;width:100%;border:1px solid #3a3a3a;background:#151515;color:#fff;border-radius:999px;padding:12px;font-size:9px;text-transform:uppercase;letter-spacing:.13em}.coming{color:#777;border-color:#292929}
-.dark{background:#0b0b0b}.menu-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:14px;margin-top:38px}.menu-box{border:1px solid #242424;border-radius:24px;padding:28px;background:#101010}.menu-row{display:flex;justify-content:space-between;gap:18px;padding:17px 0;border-bottom:1px solid #222}.menu-row:last-child{border-bottom:0}.menu-name b{display:block}.menu-name span{font-size:11px;color:#777;line-height:1.5}.menu-price{white-space:nowrap;font-weight:700}
-.soon-list{display:grid;gap:10px;margin-top:18px}.soon-item{border:1px solid #272727;border-radius:15px;padding:18px;display:flex;justify-content:space-between;color:#aaa}.soon-item b{color:#fff}.badge{font-size:9px;text-transform:uppercase;letter-spacing:.13em}
-.story{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.story-copy{color:#949494;line-height:1.9}.quote{font-family:Georgia,serif;font-size:clamp(30px,4vw,55px);line-height:1.1}
-.footer{border-top:1px solid #1f1f1f;padding:38px 5vw 50px;display:flex;justify-content:space-between;gap:24px;align-items:center;color:#6d6d6d;font-size:10px}.footer img{width:130px}
-.overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:80;opacity:0;pointer-events:none;transition:.2s}.overlay.open{opacity:1;pointer-events:auto}.drawer{position:fixed;z-index:90;right:0;top:0;bottom:0;width:min(440px,100%);background:#0c0c0c;border-left:1px solid #272727;transform:translateX(105%);transition:.3s;padding:24px;display:flex;flex-direction:column}.drawer.open{transform:none}.drawer-head{display:flex;justify-content:space-between;align-items:center}.drawer h3{font-size:28px}.x{border:0;background:none;color:#fff;font-size:27px}.cart-items{flex:1;overflow:auto}.cart-row{display:grid;grid-template-columns:1fr auto;gap:10px;padding:16px 0;border-bottom:1px solid #222}.qty{display:flex;gap:8px;align-items:center;margin-top:7px}.qty button{width:26px;height:26px;border-radius:50%;border:1px solid #333;background:#111;color:#fff}.totals{padding-top:18px}.total-line{display:flex;justify-content:space-between;margin:9px 0;color:#999}.grand{font-size:18px;color:#fff}.promo{display:flex;gap:8px}.promo input{flex:1;background:#111;border:1px solid #303030;color:#fff;border-radius:12px;padding:12px}.promo button{border:1px solid #333;background:#171717;color:#fff;border-radius:12px;padding:0 14px}.wide{width:100%;margin-top:15px}
-.modal{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.78);display:grid;place-items:center;padding:20px;opacity:0;pointer-events:none;transition:.2s}.modal.open{opacity:1;pointer-events:auto}.modal-card{width:min(760px,100%);max-height:92vh;overflow:auto;background:#0d0d0d;border:1px solid #292929;border-radius:25px;padding:26px}.modal-top{display:flex;justify-content:space-between;align-items:start}.modal-top h3{font-size:32px;margin:0}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#777}.field input,.field textarea{background:#111;border:1px solid #303030;color:#fff;border-radius:12px;padding:13px;outline:none}.field textarea{min-height:88px;resize:vertical}.fulfill{display:flex;gap:8px;margin-top:14px}.fulfill button{flex:1;padding:12px;border:1px solid #333;background:#111;color:#999;border-radius:12px}.fulfill .active{background:#eee9df;color:#080808}.error{min-height:18px;color:#d9a5a5;font-size:11px;margin-top:10px}.ok{color:#b7c7ac}
-.track-status{font-size:28px;margin:18px 0}.track-items{border-top:1px solid #262626;padding-top:12px;color:#aaa;line-height:1.7}
-.signup-card{text-align:center;max-width:520px}.signup-card p{color:#919191;line-height:1.7}.consent{display:flex;gap:10px;text-align:left;color:#8d8d8d;font-size:11px;line-height:1.5;margin-top:12px}.consent input{margin-top:3px}
-@media(max-width:1050px){.grid{grid-template-columns:repeat(2,1fr)}.menu-grid,.story{grid-template-columns:1fr}.links{display:none}}@media(max-width:700px){.nav{grid-template-columns:1fr auto;height:68px}.brand img{width:120px}.track-top{display:none}.hero{padding-top:105px}.hero-logo{width:92vw;margin-bottom:35px}.grid{grid-template-columns:1fr}.section{padding:72px 5vw}.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.footer{flex-direction:column;align-items:flex-start}}
+:root{
+  --bg:#070707;--panel:#0f0f0f;--panel2:#141414;--graphite:#1b1b1b;
+  --ink:#f5f3ee;--muted:#9a9a9a;--soft:#d8d4cb;--line:#262626;
+  --cream:#ece7dc;--black:#050505;--success:#b7c7ac;--warn:#d7c09f;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",Arial,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+button{cursor:pointer}
+::selection{background:#fff;color:#000}
+.hidden{display:none!important}
+
+/* NAV */
+.nav{height:78px;position:fixed;z-index:80;top:0;left:0;right:0;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:28px;padding:0 4.5vw;background:rgba(7,7,7,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-brand{display:flex;align-items:center;min-width:180px}
+.nav-brand img{width:150px;height:60px;object-fit:contain;object-position:left center;display:block}
+.nav-links{justify-self:center;display:flex;gap:28px;align-items:center;text-transform:uppercase;font-size:10px;letter-spacing:.18em}
+.nav-links a{opacity:.72;transition:.2s}.nav-links a:hover{opacity:1}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.lang-toggle{display:flex;align-items:center;background:#121212;border:1px solid #2b2b2b;border-radius:999px;padding:4px}
+.lang-toggle button{border:0;background:transparent;color:#8d8d8d;font-size:10px;font-weight:700;letter-spacing:.12em;padding:8px 10px;border-radius:999px}
+.lang-toggle button.active{background:#f2efe7;color:#070707}
+.bag-btn,.track-btn{border:1px solid #353535;background:#111;color:#fff;border-radius:999px;padding:11px 14px;text-transform:uppercase;letter-spacing:.13em;font-size:10px}
+.bag-count{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#f2efe7;color:#000;margin-left:7px;font-size:9px;font-weight:700}
+.order-btn{border:1px solid #f3efe6;background:#f3efe6;color:#060606;border-radius:999px;padding:12px 18px;text-transform:uppercase;letter-spacing:.13em;font-size:10px;font-weight:700}
+.mobile-menu{display:none;background:none;color:#fff;border:0;font-size:25px}
+
+/* HERO */
+.hero{min-height:100vh;padding:130px 5vw 72px;position:relative;display:grid;place-items:center;overflow:hidden;background:
+radial-gradient(circle at 50% 28%,rgba(255,255,255,.075),transparent 26%),
+radial-gradient(circle at 15% 85%,rgba(255,255,255,.035),transparent 24%),
+linear-gradient(180deg,#080808,#050505)}
+.hero:before{content:"";position:absolute;inset:0;opacity:.21;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:82px 82px;mask-image:linear-gradient(to bottom,transparent,black 26%,black 78%,transparent)}
+.hero-inner{position:relative;z-index:2;text-align:center;width:min(1180px,100%)}
+.hero-logo{width:min(720px,84vw);margin:0 auto 46px}
+.hero-logo img{width:100%;display:block;filter:drop-shadow(0 0 22px rgba(255,255,255,.035))}
+.hero-kicker{text-transform:uppercase;letter-spacing:.42em;font-size:10px;color:#a5a5a5;margin-bottom:26px}
+.hero-title{font-family:"League Spartan",sans-serif;font-size:clamp(45px,7.2vw,104px);font-weight:700;line-height:.9;letter-spacing:-.035em;margin:0 auto 8px;max-width:1020px}
+.hero-slogan{font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(21px,3vw,36px);margin:24px 0 12px;color:#ded9cf}
+.hero-desc{font-size:14px;line-height:1.8;color:#949494;max-width:650px;margin:0 auto}
+.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btn{border-radius:999px;padding:15px 23px;text-transform:uppercase;letter-spacing:.16em;font-size:10px;font-weight:700;border:1px solid #ece8de;transition:.25s}
+.btn.primary{background:#ece8de;color:#060606}.btn.primary:hover{background:#fff;transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:#f3f0e9}.btn.ghost:hover{background:#fff;color:#000}
+.hero-chips{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:40px}
+.chip{border:1px solid #2d2d2d;background:#0e0e0e;border-radius:999px;padding:10px 13px;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#9d9d9d}
+.scroll-cue{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#555}
+
+.marquee{overflow:hidden;border-top:1px solid #1e1e1e;border-bottom:1px solid #1e1e1e;background:#0c0c0c}
+.marquee-track{width:max-content;display:flex;animation:marquee 25s linear infinite;padding:14px 0}
+.marquee-track span{font-family:"League Spartan";font-weight:700;letter-spacing:.15em;font-size:18px;margin-right:42px;text-transform:uppercase;color:#d7d3ca}
+.marquee-track b{color:#515151;margin-left:42px}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* GENERIC */
+.section{padding:104px 5vw}
+.section.alt{background:#0d0d0d}
+.section.light{background:#e9e4da;color:#0b0b0b}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:36px;margin-bottom:48px}
+.eyebrow{font-size:9px;letter-spacing:.38em;text-transform:uppercase;color:#7d7d7d;margin-bottom:12px}
+.section h2{font-family:"League Spartan";font-weight:700;letter-spacing:-.04em;line-height:.95;font-size:clamp(44px,6.5vw,86px);margin:0}
+.section-copy{max-width:520px;font-size:13px;line-height:1.8;color:#8f8f8f}
+.light .section-copy,.light .eyebrow{color:#5c5a55}
+
+/* SIGNATURE */
+.signature-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.sig-card{min-height:410px;border:1px solid #262626;background:linear-gradient(150deg,#181818,#0c0c0c);border-radius:24px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;transition:.28s}
+.sig-card:hover{transform:translateY(-6px);border-color:#4d4d4d}
+.sig-card:before{content:attr(data-num);position:absolute;right:12px;top:-10px;font-family:"League Spartan";font-size:118px;font-weight:800;color:rgba(255,255,255,.035);line-height:1}
+.sig-type{font-size:8px;letter-spacing:.26em;text-transform:uppercase;color:#777}
+.sig-card h3{font-family:"League Spartan";font-size:34px;line-height:.94;letter-spacing:-.03em;margin:12px 0 16px}
+.sig-card p{font-size:12px;line-height:1.65;color:#8d8d8d;margin:0}
+.sig-price{margin-top:24px;font-size:12px;color:#e2ddd4;display:flex;justify-content:space-between;align-items:center}
+.add-small{width:35px;height:35px;border-radius:50%;border:1px solid #3a3a3a;background:#111;color:#fff;font-size:17px}
+
+/* DROPS */
+.drop-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.drop-track::-webkit-scrollbar{display:none}
+.drop-card{flex:0 0 min(430px,85vw);height:340px;scroll-snap-align:start;border-radius:24px;padding:28px;background:#111;color:#fff;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.drop-card:nth-child(even){background:#c7c0b4;color:#0a0a0a}
+.drop-card:after{content:"";position:absolute;right:-70px;bottom:-110px;width:240px;height:240px;border-radius:50%;border:1px solid currentColor;opacity:.14}
+.drop-tag{font-size:8px;letter-spacing:.3em;text-transform:uppercase;opacity:.6}
+.drop-card h3{font-family:"League Spartan";font-weight:700;font-size:52px;letter-spacing:-.04em;line-height:.95;margin:0;max-width:330px}
+.drop-card p{font-size:12px;line-height:1.65;max-width:330px;opacity:.67}
+.drop-card .shop-inline{align-self:flex-start;margin-top:12px;border:1px solid currentColor;background:transparent;color:inherit;border-radius:999px;padding:10px 15px;text-transform:uppercase;letter-spacing:.13em;font-size:9px}
+.drop-controls{display:flex;gap:8px;margin-top:22px}.round-btn{width:42px;height:42px;border-radius:50%;border:1px solid #777;background:transparent;color:inherit;font-size:18px}
+
+/* MENU */
+.menu-toolbar{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:34px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{border:1px solid #303030;background:transparent;color:#909090;border-radius:999px;padding:11px 16px;text-transform:uppercase;font-size:9px;letter-spacing:.14em}
+.tab.active{background:#f0ece3;color:#090909;border-color:#f0ece3}
+.menu-note{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#666}
+.menu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:42px;border-top:1px solid #242424}
+.menu-item{padding:25px 0;border-bottom:1px solid #242424;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start}
+.menu-item h4{font-family:"League Spartan";font-size:24px;line-height:1;margin:0 0 9px;letter-spacing:-.02em}
+.menu-item p{font-size:11px;line-height:1.65;color:#828282;margin:0;max-width:540px}
+.menu-actions{display:flex;flex-direction:column;align-items:flex-end;gap:9px}
+.price{font-size:12px;color:#d8d3ca;white-space:nowrap}
+.add-btn{border:1px solid #333;background:#111;color:#eee;border-radius:999px;padding:9px 12px;text-transform:uppercase;letter-spacing:.12em;font-size:8px}
+.add-btn:hover{border-color:#777}
+.soon-badge{border:1px solid #494236;color:#c8b391;border-radius:999px;padding:8px 10px;font-size:8px;text-transform:uppercase;letter-spacing:.13em;white-space:nowrap}
+.menu-item.soon{opacity:.62}.menu-item.hidden-item{display:none}
+
+/* SMOOTHIE TEASER */
+.coming-soon{padding:96px 5vw;background:#121212;position:relative;overflow:hidden}
+.coming-soon:before{content:"COMING SOON";position:absolute;font-family:"League Spartan";font-weight:800;font-size:clamp(90px,17vw,240px);line-height:.8;color:rgba(255,255,255,.025);left:-15px;bottom:-25px;white-space:nowrap}
+.soon-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.soon-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.soon-card{padding:20px;border:1px solid #292929;border-radius:18px;background:#0d0d0d}
+.soon-card b{font-family:"League Spartan";font-size:20px}.soon-card span{display:block;color:#797979;font-size:10px;line-height:1.5;margin-top:7px}
+
+/* STORY */
+.story{background:#e9e4da;color:#0b0b0b;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.story .eyebrow{color:#68645e}
+.story-quote{font-family:"Playfair Display";font-size:clamp(34px,4.3vw,60px);line-height:1.06;margin:0 0 26px}
+.story-copy{font-size:13px;line-height:1.9;color:#55514b;max-width:660px}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.story-card{min-height:180px;border:1px solid #9a958b;border-radius:22px;padding:24px;display:flex;flex-direction:column;justify-content:space-between}
+.story-card strong{font-family:"League Spartan";font-size:36px}.story-card span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#6c675f}
+
+/* CTA */
+.cta{padding:105px 5vw;text-align:center;background:linear-gradient(180deg,#090909,#050505)}
+.cta h2{max-width:850px;margin:0 auto 18px}.cta p{color:#888;max-width:600px;margin:0 auto 30px;line-height:1.75;font-size:13px}
+
+/* CART DRAWER */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.66);z-index:90;opacity:0;pointer-events:none;transition:.25s}.overlay.open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;right:0;top:0;bottom:0;width:min(460px,100vw);background:#0c0c0c;z-index:100;border-left:1px solid #292929;transform:translateX(100%);transition:.3s;display:flex;flex-direction:column}
+.drawer.open{transform:translateX(0)}
+.drawer-head{padding:24px;border-bottom:1px solid #242424;display:flex;justify-content:space-between;align-items:center}
+.drawer-head h3{font-family:"League Spartan";font-size:28px;margin:0}.icon-close{border:0;background:none;color:#fff;font-size:27px}
+.cart-items{padding:12px 24px;overflow:auto;flex:1}
+.empty-cart{color:#666;text-align:center;padding:80px 20px;line-height:1.8;font-size:13px}
+.cart-row{padding:17px 0;border-bottom:1px solid #222;display:grid;grid-template-columns:1fr auto;gap:16px}
+.cart-row b{display:block;font-size:13px;margin-bottom:4px}.cart-row small{color:#777}.cart-controls{display:flex;align-items:center;gap:8px;margin-top:10px}.qty{width:26px;height:26px;border-radius:50%;border:1px solid #333;background:#111;color:#fff}.remove{border:0;background:none;color:#777;font-size:10px;text-transform:uppercase;letter-spacing:.1em}
+.cart-foot{padding:20px 24px 26px;border-top:1px solid #242424;background:#0a0a0a}
+.promo{display:flex;gap:8px;margin-bottom:14px}.promo input{flex:1;border:1px solid #303030;background:#111;color:#fff;border-radius:12px;padding:12px;outline:none}.promo button{border:1px solid #3e3e3e;background:#181818;color:#fff;border-radius:12px;padding:0 14px;font-size:10px;text-transform:uppercase;letter-spacing:.1em}
+.promo-msg{font-size:10px;color:#a79e8d;min-height:16px;margin-bottom:10px}
+.total-line{display:flex;justify-content:space-between;margin:8px 0;color:#9a9a9a;font-size:12px}.total-line.grand{color:#fff;font-size:16px;margin-top:14px}
+.checkout-btn{width:100%;margin-top:16px;background:#f3efe6;color:#060606;border:0;border-radius:999px;padding:15px;text-transform:uppercase;letter-spacing:.15em;font-size:10px;font-weight:700}
+
+/* MODAL / CHECKOUT */
+.modal{position:fixed;inset:0;z-index:110;display:grid;place-items:center;padding:20px;opacity:0;pointer-events:none;transition:.25s;background:rgba(0,0,0,.76);backdrop-filter:blur(7px)}
+.modal.open{opacity:1;pointer-events:auto}
+.modal-card{width:min(760px,100%);max-height:92vh;overflow:auto;background:#0d0d0d;border:1px solid #2b2b2b;border-radius:26px;padding:26px}
+.modal-top{display:flex;justify-content:space-between;gap:20px;align-items:start;margin-bottom:22px}.modal-top h3{font-family:"League Spartan";font-size:34px;margin:0}.modal-top p{color:#777;font-size:11px;margin:5px 0 0}
+.checkout-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#737373}.field input,.field select{border:1px solid #303030;background:#121212;color:#fff;border-radius:12px;padding:13px;outline:none}.field input:focus{border-color:#777}
+.fulfillment{display:flex;gap:8px;margin:10px 0 20px}.fulfill-btn{flex:1;padding:12px;border:1px solid #333;background:#111;color:#8e8e8e;border-radius:12px;text-transform:uppercase;font-size:9px;letter-spacing:.12em}.fulfill-btn.active{background:#eee9df;color:#070707;border-color:#eee9df}
+.pay-title{margin:24px 0 10px;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#777}.pay-methods{display:grid;grid-template-columns:1fr 1fr;gap:8px}.pay-btn{padding:14px;border:1px solid #333;background:#111;color:#fff;border-radius:12px;font-weight:700}.pay-btn.active{border-color:#eee9df;background:#eee9df;color:#000}.apple{font-size:15px}.card-fields{margin-top:12px}
+.secure-note{color:#666;font-size:10px;line-height:1.55;margin-top:12px}.place-order{width:100%;margin-top:18px;border:0;background:#f1ede5;color:#060606;border-radius:999px;padding:15px;text-transform:uppercase;letter-spacing:.15em;font-size:10px;font-weight:700}
+
+/* TRACKER */
+.tracker-card{width:min(880px,100%)}
+.order-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:20px}.order-number{font-size:10px;color:#777;letter-spacing:.14em;text-transform:uppercase}
+.status-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:18px}.status-step{border:1px solid #292929;border-radius:13px;padding:11px;text-align:center;color:#595959;font-size:9px;text-transform:uppercase;letter-spacing:.11em}.status-step.active{background:#ece8df;color:#080808;border-color:#ece8df}.status-step.done{color:#bfcbb7;border-color:#56624f}
+.map{height:360px;border:1px solid #292929;border-radius:22px;position:relative;overflow:hidden;background:
+linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),#101010;background-size:32px 32px}
+.map:before{content:"";position:absolute;left:12%;top:68%;width:72%;height:2px;background:linear-gradient(90deg,#6b6b6b,#ddd);transform:rotate(-13deg);transform-origin:left center;box-shadow:90px -65px 0 -0.5px #797979,170px -10px 0 -0.5px #797979}
+.map-label{position:absolute;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#6b6b6b}.label-shop{left:7%;bottom:14%}.label-you{right:8%;top:17%}
+.pin{position:absolute;width:16px;height:16px;border-radius:50%;background:#f2eee6;box-shadow:0 0 0 6px rgba(255,255,255,.08);left:12%;top:68%;transition:5s linear}.pin.moving{left:78%;top:22%}
+.pin:after{content:"";position:absolute;inset:5px;border-radius:50%;background:#111}
+.eta{display:flex;justify-content:space-between;gap:20px;margin-top:14px;color:#8d8d8d;font-size:11px}.eta b{color:#fff}
+
+.footer{padding:34px 5vw 46px;border-top:1px solid #1f1f1f;display:flex;justify-content:space-between;gap:20px;align-items:center;color:#656565;font-size:10px}.footer img{width:128px;opacity:.9}.footer-links{display:flex;gap:18px;flex-wrap:wrap}
+
+@media(max-width:1100px){.signature-grid{grid-template-columns:repeat(2,1fr)}.signature-grid .sig-card:last-child{grid-column:1/-1}.nav-links{gap:18px}.soon-inner,.story{grid-template-columns:1fr}.menu-grid{grid-template-columns:1fr}.story-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:800px){.nav{height:68px;grid-template-columns:1fr auto auto;padding:0 4vw}.nav-brand img{width:118px;height:48px}.mobile-menu{display:block}.nav-links{display:none;position:absolute;left:0;right:0;top:68px;background:#090909;border-bottom:1px solid #262626;padding:22px 5vw;flex-direction:column;align-items:flex-start}.nav-links.open{display:flex}.track-btn,.order-btn{display:none}.hero{padding-top:105px}.hero-logo{width:92vw;margin-bottom:34px}.section{padding:78px 5vw}.section-head{align-items:flex-start;flex-direction:column}.signature-grid{grid-template-columns:1fr}.signature-grid .sig-card:last-child{grid-column:auto}.sig-card{min-height:330px}.soon-list{grid-template-columns:1fr}.story-grid{grid-template-columns:1fr 1fr}.checkout-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.pay-methods{grid-template-columns:1fr}.status-steps{grid-template-columns:1fr 1fr}.footer{align-items:flex-start;flex-direction:column}.lang-toggle button{padding:7px 8px}.bag-btn{padding:10px 12px}}
+@media(max-width:470px){.hero-title{font-size:48px}.hero-desc{font-size:12px}.story-grid{grid-template-columns:1fr}.status-steps{grid-template-columns:1fr}.modal-card{padding:20px}.map{height:300px}}
+
+/* REAL ORDER + CUSTOMER LIST */
+.payment-summary{margin:20px 0 12px;border:1px solid #303030;background:#111;border-radius:12px;padding:13px;color:#c9c5bc;font-size:12px}
+.marketing-check{display:flex;gap:10px;align-items:flex-start;margin:16px 0;color:#8f8f8f;font-size:11px;line-height:1.55}.marketing-check input{margin-top:2px;accent-color:#f3efe6}
+.order-error{min-height:18px;color:#cf9191;font-size:11px;margin:10px 2px 0}.order-error.ok{color:#a9bca0}
+.track-result{margin-top:18px;border:1px solid #2c2c2c;background:#101010;border-radius:18px;padding:18px}.track-result h4{font-family:"League Spartan";font-size:26px;margin:0 0 8px}.track-result p{color:#8d8d8d;line-height:1.7;font-size:12px}.track-result .track-status{display:inline-block;border:1px solid #444;border-radius:999px;padding:8px 11px;text-transform:uppercase;letter-spacing:.12em;font-size:9px;color:#f2eee6;margin:8px 0}.track-result .track-items{border-top:1px solid #242424;margin-top:14px;padding-top:14px;color:#aaa;font-size:11px;line-height:1.8}
+.signup-modal{backdrop-filter:blur(13px)}.signup-card{width:min(620px,100%);position:relative;padding:36px}.signup-card h3{font-family:"League Spartan";font-size:clamp(42px,8vw,72px);line-height:.88;margin:14px 0}.signup-card>p{color:#8e8e8e;line-height:1.8;font-size:13px;max-width:500px}.signup-close{position:absolute;right:20px;top:18px}
+.coming-note{display:inline-block;margin-top:8px;color:#777;font-size:9px;text-transform:uppercase;letter-spacing:.12em}
 </style>
 </head>
 <body>
 <nav class="nav">
-<a class="brand" href="#top"><img src="https://6aad01edce4d802daf6812c6--manhattanbakery.netlify.app/manhattan-bakery-logo-hd.png" alt="The Manhattan Bakery"></a>
-<div class="links"><a href="#signature">Signature 5</a><a href="#menu">Menu</a><a href="#story">Our Story</a></div>
-<div class="actions"><button class="pill track-top" id="trackTop">Track Order</button><button class="pill light" id="bagBtn">Bag <span id="bagCount">0</span></button></div>
+  <a class="nav-brand" href="#top"><img src="manhattan-bakery-logo-hd.png" alt="The Manhattan Bakery logo"></a>
+  <button class="mobile-menu" aria-label="Open menu">☰</button>
+  <div class="nav-links">
+    <a href="#signature" data-i18n="nav_signature">Signature 5</a>
+    <a href="#drops" data-i18n="nav_drops">Weekly Drops</a>
+    <a href="#menu" data-i18n="nav_menu">Menu</a>
+    <a href="#story" data-i18n="nav_story">Our Story</a>
+  </div>
+  <div class="nav-actions">
+    <div class="lang-toggle" aria-label="Language">
+      <button class="lang active" data-lang="en">EN</button><button class="lang" data-lang="mn">MN</button>
+    </div>
+    <button class="track-btn" id="trackOpen" data-i18n="track_order">Track</button>
+    <button class="bag-btn" id="bagOpen"><span data-i18n="bag">Bag</span><span class="bag-count" id="bagCount">0</span></button>
+    <a class="order-btn" href="#menu" data-i18n="order_now">Order Now</a>
+  </div>
 </nav>
+
 <main id="top">
 <section class="hero">
-<div class="hero-inner">
-<div class="kicker">New York roots • Ulaanbaatar made</div>
-<div class="hero-logo"><img src="https://6aad01edce4d802daf6812c6--manhattanbakery.netlify.app/manhattan-bakery-logo-hd.png" alt="The Manhattan Bakery"></div>
-<h1>NEW YORK BAKERY CULTURE, REIMAGINED IN ULAANBAATAR.</h1>
-<div class="slogan">A little taste of Manhattan in every sip &amp; bite.</div>
-<p>Signature muffins and weekly drops — built around quality, bold flavor and a little piece of New York. Drinks, coffee and smoothies are coming soon.</p>
-<div class="hero-buttons"><a class="btn primary" href="#menu">Shop Muffins</a><a class="btn" href="#signature">Explore Signature 5</a></div>
-</div>
+  <div class="hero-inner">
+    <div class="hero-kicker" data-i18n="hero_kicker">New York roots • Ulaanbaatar made</div>
+    <div class="hero-logo"><img src="manhattan-bakery-logo-hd.png" alt="The Manhattan Bakery"></div>
+    <h1 class="hero-title" data-i18n="hero_title">NEW YORK BAKERY CULTURE, REIMAGINED IN ULAANBAATAR.</h1>
+    <div class="hero-slogan" data-i18n="slogan">A little taste of Manhattan in every sip & bite.</div>
+    <p class="hero-desc" data-i18n="hero_desc">Signature muffins and weekly New York-inspired drops — our first chapter in Ulaanbaatar.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#menu" data-i18n="shop_now">Shop / Order Now</a>
+      <a class="btn ghost" href="#signature" data-i18n="explore_signature">Explore Signature 5</a>
+    </div>
+    <div class="hero-chips">
+      <span class="chip" data-i18n="chip_weekly">Weekly flavor drops</span><span class="chip" data-i18n="chip_coffee">Specialty coffee</span><span class="chip" data-i18n="chip_vegan">Vegan options</span><span class="chip" data-i18n="chip_organic">Organic choices</span>
+    </div>
+  </div>
+  <div class="scroll-cue" data-i18n="scroll">Scroll to discover</div>
 </section>
-<div class="marquee"><div>WEEKLY MUFFIN DROPS • SMALL BATCH • NEW YORK ROOTS • ULAANBAATAR MADE • DRINKS COMING SOON • WEEKLY MUFFIN DROPS • SMALL BATCH</div></div>
-<section class="section" id="signature">
-<div class="eyebrow">The Signature 5</div><h2>FIVE MUFFINS.<br>OUR STARTING LINEUP.</h2>
-<p class="lead">The five signatures we want Manhattan Bakery to be known for. Orderable now through our secure BYL/QPay checkout.</p>
-<div class="grid" id="signatureGrid"></div>
+
+<div class="marquee"><div class="marquee-track">
+  <span>Signature 5 <b>◆</b></span><span>Weekly Drops <b>◆</b></span><span>New York Roots <b>◆</b></span><span>Ulaanbaatar Made <b>◆</b></span><span>Specialty Coffee <b>◆</b></span><span>Signature 5 <b>◆</b></span><span>Weekly Drops <b>◆</b></span><span>New York Roots <b>◆</b></span><span>Ulaanbaatar Made <b>◆</b></span><span>Specialty Coffee <b>◆</b></span>
+</div></div>
+
+<section class="section alt" id="signature">
+  <div class="section-head"><div><div class="eyebrow" data-i18n="signature_eyebrow">The permanent icons</div><h2 data-i18n="signature_title">THE SIGNATURE 5.</h2></div><p class="section-copy" data-i18n="signature_copy">Five house signatures that define Manhattan Bakery — familiar enough to crave, distinct enough to remember.</p></div>
+  <div class="signature-grid" id="signatureGrid"></div>
 </section>
-<section class="section dark" id="menu">
-<div class="eyebrow">Menu</div><h2>MUFFINS NOW.<br>EVERYTHING ELSE SOON.</h2>
-<div class="menu-grid">
-<div class="menu-box"><h3>Muffins</h3><div id="menuRows"></div></div>
-<div class="menu-box"><h3>Coming Soon</h3><p class="lead">We’re keeping launch focused. All drinks are temporarily coming soon.</p>
-<div class="soon-list"><div class="soon-item"><b>Specialty Coffee</b><span class="badge">Coming Soon</span></div><div class="soon-item"><b>Frappes</b><span class="badge">Coming Soon</span></div><div class="soon-item"><b>Smoothies</b><span class="badge">Coming Soon</span></div><div class="soon-item"><b>Matcha & Tea</b><span class="badge">Coming Soon</span></div><div class="soon-item"><b>Pastries</b><span class="badge">Coming Soon</span></div></div>
-</div>
-</div>
+
+<section class="section light" id="drops">
+  <div class="section-head"><div><div class="eyebrow" data-i18n="drops_eyebrow">Limited • rotating • weekly</div><h2 data-i18n="drops_title">WEEKLY DROPS.</h2></div><p class="section-copy" data-i18n="drops_copy">The menu keeps moving. Small-batch releases, seasonal flavors and New York-inspired ideas appear for a limited time.</p></div>
+  <div class="drop-track" id="dropTrack"></div>
+  <div class="drop-controls"><button class="round-btn" id="dropPrev">←</button><button class="round-btn" id="dropNext">→</button></div>
 </section>
-<section class="section" id="story"><div class="story"><div class="quote">From years in New York to a bakery built for Ulaanbaatar.</div><div class="story-copy">Our family spent nearly a decade living in New York, making muffins and pastries for family, friends and the people around us. What began in a small circle eventually became the idea for The Manhattan Bakery — bringing the bakery culture, flavors and atmosphere we loved to Ulaanbaatar in our own way.</div></div></section>
+
+<section class="section" id="menu">
+  <div class="section-head"><div><div class="eyebrow" data-i18n="menu_eyebrow">Order from the current lineup</div><h2 data-i18n="menu_title">THE MENU.</h2></div><p class="section-copy" data-i18n="menu_copy">For launch, we’re keeping it focused: muffins only. Pastries, coffee and smoothies are shown as what’s coming next.</p></div>
+  <div class="menu-toolbar">
+    <div class="tabs">
+      <button class="tab active" data-filter="all" data-i18n="tab_all">All</button>
+      <button class="tab" data-filter="muffin" data-i18n="tab_muffins">Muffins</button>
+      <button class="tab" data-filter="pastry" data-i18n="tab_pastries">Pastries</button>
+      <button class="tab" data-filter="coffee" data-i18n="tab_coffee">Coffee</button>
+      <button class="tab" data-filter="smoothie" data-i18n="tab_smoothies">Smoothies</button>
+    </div>
+    <div class="menu-note" data-i18n="menu_note">Current launch muffin menu</div>
+  </div>
+  <div class="menu-grid" id="menuGrid"></div>
+</section>
+
+<section class="coming-soon" id="smoothies">
+  <div class="soon-inner">
+    <div><div class="eyebrow" data-i18n="soon_eyebrow">In development</div><h2 data-i18n="soon_title">THE MANHATTAN SMOOTHIE LAB.</h2><p class="section-copy" data-i18n="soon_copy">Drinks are in development. Coffee, frappes and Manhattan-style smoothies will launch later — they are not available to order yet.</p></div>
+    <div class="soon-list" id="soonList"></div>
+  </div>
+</section>
+
+<section class="section story" id="story">
+  <div><div class="eyebrow" data-i18n="story_eyebrow">Our story</div><p class="story-quote" data-i18n="story_quote">“New York roots. Ulaanbaatar made.”</p><p class="story-copy" data-i18n="story_copy">Our family spent almost a decade living in New York. Muffins and pastries were something we made and shared with the people around us long before there was a brand. The Manhattan Bakery grew from that — a way to bring the bakery culture, flavor and energy we knew in New York into a modern Ulaanbaatar experience.</p></div>
+  <div class="story-grid">
+    <div class="story-card"><strong>NYC</strong><span data-i18n="story_card1">Roots & inspiration</span></div>
+    <div class="story-card"><strong>UB</strong><span data-i18n="story_card2">Made in Ulaanbaatar</span></div>
+    <div class="story-card"><strong>5</strong><span data-i18n="story_card3">House signatures</span></div>
+    <div class="story-card"><strong>∞</strong><span data-i18n="story_card4">New weekly ideas</span></div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="eyebrow" data-i18n="cta_eyebrow">The Manhattan Bakery</div>
+  <h2 data-i18n="cta_title">YOUR NEXT FAVORITE DROP MIGHT ONLY LAST A WEEK.</h2>
+  <p data-i18n="cta_copy">Order from the current muffin menu, use promo codes in your bag, and check your real order status after checkout.</p>
+  <a class="btn primary" href="#menu" data-i18n="order_now">Order Now</a>
+</section>
 </main>
-<footer class="footer"><img src="https://6aad01edce4d802daf6812c6--manhattanbakery.netlify.app/manhattan-bakery-logo-hd.png" alt="The Manhattan Bakery"><div>Ulaanbaatar, Mongolia • © 2026 The Manhattan Bakery</div></footer>
 
-<div class="overlay" id="overlay"></div>
-<aside class="drawer" id="drawer"><div class="drawer-head"><h3>Your Bag</h3><button class="x" id="bagClose">×</button></div><div class="cart-items" id="cartItems"></div><div class="totals"><div class="promo"><input id="promoInput" placeholder="Promo code"><button id="promoBtn">Apply</button></div><div class="error" id="promoMsg"></div><div class="total-line"><span>Subtotal</span><span id="subtotal">₮0</span></div><div class="total-line"><span>Discount</span><span id="discount">−₮0</span></div><div class="total-line grand"><span>Total</span><span id="total">₮0</span></div><button class="btn primary wide" id="checkoutBtn">Continue to Checkout</button></div></aside>
+<footer class="footer"><img src="manhattan-bakery-logo-hd.png" alt="The Manhattan Bakery"><div class="footer-links"><span data-i18n="footer_loc">Ulaanbaatar, Mongolia</span><span>Instagram</span><span>Facebook</span><span>© 2026 The Manhattan Bakery</span></div></footer>
 
-<div class="modal" id="checkoutModal"><div class="modal-card"><div class="modal-top"><div><div class="eyebrow">Secure Checkout</div><h3>Customer details</h3></div><button class="x modalClose">×</button></div>
-<div class="fulfill"><button class="active" data-fulfill="delivery">Delivery</button><button data-fulfill="pickup">Pickup</button></div>
-<div class="fields"><div class="field"><label>Name</label><input id="custName"></div><div class="field"><label>Phone</label><input id="custPhone" placeholder="+976"></div><div class="field full"><label>Email</label><input id="custEmail" type="email"></div><div class="field full" id="addressField"><label>Delivery address</label><input id="custAddress"></div><div class="field full"><label>Order notes</label><textarea id="custNotes"></textarea></div></div>
-<label class="consent"><input id="checkoutMarketing" type="checkbox"> <span>Send me grand opening updates, weekly muffin drops and limited releases by email. I can unsubscribe anytime.</span></label>
-<div class="error" id="checkoutError"></div><button class="btn primary wide" id="payBtn">Continue to BYL / QPay</button><p style="color:#666;font-size:10px;line-height:1.5">Payment is completed on BYL’s secure checkout. Your order is only confirmed after BYL reports a successful payment.</p></div></div>
+<div class="overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="cartDrawer" aria-label="Shopping bag">
+  <div class="drawer-head"><h3 data-i18n="your_bag">YOUR BAG</h3><button class="icon-close" id="bagClose">×</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="promo"><input id="promoInput" placeholder="Promo code"><button id="promoApply" data-i18n="apply">Apply</button></div>
+    <div class="promo-msg" id="promoMsg"></div>
+    <div class="total-line"><span data-i18n="subtotal">Subtotal</span><span id="subtotal">₮0</span></div>
+    <div class="total-line"><span data-i18n="discount">Discount</span><span id="discount">−₮0</span></div>
+    <div class="total-line grand"><span data-i18n="total">Total</span><span id="total">₮0</span></div>
+    <button class="checkout-btn" id="checkoutOpen" data-i18n="checkout">Checkout</button>
+  </div>
+</aside>
 
-<div class="modal" id="trackModal"><div class="modal-card"><div class="modal-top"><div><div class="eyebrow">Order status</div><h3>Track your order</h3></div><button class="x modalClose">×</button></div><div class="fields"><div class="field"><label>Order number</label><input id="trackId" placeholder="MB-..."></div><div class="field"><label>Phone</label><input id="trackPhone"></div></div><button class="btn primary wide" id="trackLookup">Check Status</button><div id="trackResult" class="track-items hidden"></div></div></div>
+<div class="modal" id="checkoutModal">
+  <div class="modal-card">
+    <div class="modal-top"><div><h3 data-i18n="checkout_title">CHECKOUT</h3><p data-i18n="checkout_sub">Pickup or delivery • real order confirmation</p></div><button class="icon-close" data-close="checkoutModal">×</button></div>
+    <div class="fulfillment"><button class="fulfill-btn active" data-mode="delivery" data-i18n="delivery">Delivery</button><button class="fulfill-btn" data-mode="pickup" data-i18n="pickup">Pickup</button></div>
+    <div class="checkout-grid">
+      <div class="field"><label data-i18n="name">Name</label><input id="custName" autocomplete="name" placeholder="Your name"></div>
+      <div class="field"><label data-i18n="phone">Phone</label><input id="custPhone" autocomplete="tel" placeholder="+976"></div>
+      <div class="field full"><label>Email</label><input id="custEmail" type="email" autocomplete="email" placeholder="you@example.com"></div>
+      <div class="field full delivery-field"><label data-i18n="address">Delivery address</label><input id="custAddress" autocomplete="street-address" placeholder="District, khoroo, building / apartment"></div>
+      <div class="field full"><label data-i18n="notes">Order notes</label><input id="custNotes" placeholder="Allergies, delivery notes, etc."></div>
+    </div>
+    <div class="payment-summary" id="paymentSummary">Payment: cash on delivery.</div>
+    <label class="marketing-check"><input type="checkbox" id="checkoutMarketing"> <span>Send me weekly muffin drops, limited releases and grand-opening updates by email.</span></label>
+    <p class="secure-note">Your order is saved to our order system. Online card / Apple Pay is not enabled yet, so no card details are collected.</p>
+    <button class="place-order" id="placeOrder" data-i18n="place_order">Place Order</button>
+    <p class="order-error" id="orderError"></p>
+  </div>
+</div>
 
-<div class="modal" id="signupModal"><div class="modal-card signup-card"><button class="x modalClose" style="float:right">×</button><div class="eyebrow">Be first to know</div><h3 style="font-size:36px;margin:14px 0">Manhattan Bakery updates.</h3><p>Join for grand opening news, weekly muffin drops and limited flavors.</p><div class="fields"><div class="field"><label>Name</label><input id="signupName"></div><div class="field"><label>Email</label><input id="signupEmail" type="email"></div></div><label class="consent"><input id="signupConsent" type="checkbox"> <span>I agree to receive marketing emails from The Manhattan Bakery and understand I can unsubscribe anytime.</span></label><div class="error" id="signupMsg"></div><button class="btn primary wide" id="signupSubmit">Join the List</button></div></div>
+<div class="modal" id="trackerModal">
+  <div class="modal-card tracker-card">
+    <div class="order-head"><div><div class="order-number">THE MANHATTAN BAKERY</div><h3 style="font-family:'League Spartan';font-size:34px;margin:6px 0 0" data-i18n="tracking_title">CHECK ORDER STATUS</h3></div><button class="icon-close" data-close="trackerModal">×</button></div>
+    <div class="checkout-grid track-lookup">
+      <div class="field"><label>Order number</label><input id="trackId" placeholder="MB-260918-ABC123"></div>
+      <div class="field"><label data-i18n="phone">Phone</label><input id="trackPhone" placeholder="+976"></div>
+    </div>
+    <button class="place-order" id="trackLookup">Check Status</button>
+    <div id="trackResult" class="track-result hidden"></div>
+  </div>
+</div>
+
+<div class="modal signup-modal" id="signupModal">
+  <div class="modal-card signup-card">
+    <button class="icon-close signup-close" id="signupClose">×</button>
+    <div class="eyebrow">THE MANHATTAN LIST</div>
+    <h3>BE FIRST TO KNOW.</h3>
+    <p>Grand opening. Weekly muffin drops. Limited flavors. Leave your email and we’ll send the important stuff — not constant spam.</p>
+    <div class="checkout-grid">
+      <div class="field"><label>First name</label><input id="signupName" autocomplete="given-name" placeholder="Your name"></div>
+      <div class="field"><label>Email</label><input id="signupEmail" type="email" autocomplete="email" placeholder="you@example.com"></div>
+    </div>
+    <label class="marketing-check"><input type="checkbox" id="signupConsent"> <span>I agree to receive Manhattan Bakery marketing emails. I can unsubscribe anytime.</span></label>
+    <button class="place-order" id="signupSubmit">Join the list</button>
+    <p class="order-error" id="signupMsg"></p>
+  </div>
+</div>
 
 <script>
-const LOGO='https://6aad01edce4d802daf6812c6--manhattanbakery.netlify.app/manhattan-bakery-logo-hd.png';
-const products=[
-{name:'Fifth Avenue Blackout',price:15900,desc:'Dark chocolate muffin with a rich cocoa crumb.'},
-{name:'Brooklyn Berry Cheesecake',price:15900,desc:'Berry muffin with a cheesecake-inspired center.'},
-{name:'SoHo Pistachio Cloud',price:16900,desc:'Pistachio-forward muffin with a soft, premium finish.'},
-{name:'Empire Salted Caramel',price:15900,desc:'Caramel muffin balanced with a touch of sea salt.'},
-{name:'Central Park Lemon Poppy',price:14900,desc:'Bright lemon and poppy seed with a soft crumb.'},
-{name:'Tribeca Tiramisu Muffin',price:16900,desc:'Coffee-cocoa inspired muffin.'},
-{name:'Broadway Cinnamon Crumb',price:15900,desc:'Cinnamon muffin with a generous crumb top.'},
-{name:'Chelsea Strawberry Matcha Muffin',price:16900,desc:'Strawberry and matcha-inspired muffin.'},
-{name:'Manhattan Classic Blueberry',price:13900,desc:'Classic blueberry, Manhattan Bakery style.'},
-{name:'Madison Double Chocolate',price:14900,desc:'Double chocolate with a soft bakery crumb.'}
+const translations={
+ en:{
+  nav_signature:'Signature 5',nav_drops:'Weekly Drops',nav_menu:'Menu',nav_story:'Our Story',track_order:'Track Order',bag:'Bag',order_now:'Order Now',hero_kicker:'New York roots • Ulaanbaatar made',hero_title:'NEW YORK BAKERY CULTURE, REIMAGINED IN ULAANBAATAR.',slogan:'A little taste of Manhattan in every sip & bite.',hero_desc:'Signature muffins and weekly New York-inspired drops — our first chapter in Ulaanbaatar.',shop_now:'Shop / Order Now',explore_signature:'Explore Signature 5',chip_weekly:'Weekly flavor drops',chip_coffee:'Coffee • coming soon',chip_vegan:'Vegan options',chip_organic:'Organic choices',scroll:'Scroll to discover',signature_eyebrow:'The permanent icons',signature_title:'THE SIGNATURE 5.',signature_copy:'Five house muffins that define Manhattan Bakery — familiar enough to crave, distinct enough to remember.',drops_eyebrow:'Limited • rotating • weekly',drops_title:'WEEKLY DROPS.',drops_copy:'The muffin menu keeps moving. Small-batch releases, seasonal flavors and New York-inspired ideas appear for a limited time.',menu_eyebrow:'Order from the current lineup',menu_title:'THE MENU.',menu_copy:'For launch, we’re keeping it focused: muffins only. Pastries, coffee and smoothies are shown as what’s coming next.',tab_all:'All',tab_muffins:'Muffins',tab_pastries:'Pastries',tab_coffee:'Coffee',tab_smoothies:'Smoothies',menu_note:'Current launch muffin menu',soon_eyebrow:'In development',soon_title:'THE DRINKS ARE COMING.',soon_copy:'Coffee, frappes and Manhattan-style smoothies are in development and unavailable to order for now.',story_eyebrow:'Our story',story_quote:'“New York roots. Ulaanbaatar made.”',story_copy:'Our family spent almost a decade living in New York. Muffins and pastries were something we made and shared with the people around us long before there was a brand. The Manhattan Bakery grew from that — a way to bring the bakery culture, flavor and energy we knew in New York into a modern Ulaanbaatar experience.',story_card1:'Roots & inspiration',story_card2:'Made in Ulaanbaatar',story_card3:'House signatures',story_card4:'New weekly ideas',cta_eyebrow:'The Manhattan Bakery',cta_title:'YOUR NEXT FAVORITE DROP MIGHT ONLY LAST A WEEK.',cta_copy:'Order from the current muffin menu, use promo codes in your bag, and check your real order status after checkout.',footer_loc:'Ulaanbaatar, Mongolia',your_bag:'YOUR BAG',apply:'Apply',subtotal:'Subtotal',discount:'Discount',total:'Total',checkout:'Checkout',checkout_title:'CHECKOUT',checkout_sub:'Pickup or delivery • real order confirmation',delivery:'Delivery',pickup:'Pickup',name:'Name',phone:'Phone',address:'Delivery address',notes:'Order notes',place_order:'Place Order',tracking_title:'CHECK ORDER STATUS'
+ },
+ mn:{
+  nav_signature:'Signature 5',nav_drops:'7 хоногийн Drop',nav_menu:'Меню',nav_story:'Бидний түүх',track_order:'Захиалга хянах',bag:'Сагс',order_now:'Захиалах',hero_kicker:'Нью-Йорк үндэс • Улаанбаатарт бүтээгдэнэ',hero_title:'НЬЮ-ЙОРКИЙН BAKERY СОЁЛЫГ УЛААНБААТАРТ ШИНЭЭР.',slogan:'Манхэттэний амтыг балга бүрт, хазалт бүрт.',hero_desc:'Signature muffin болон Нью-Йорк inspiration-тэй 7 хоног бүрийн шинэ drop — Улаанбаатар дахь бидний эхний chapter.',shop_now:'Одоо захиалах',explore_signature:'Signature 5 үзэх',chip_weekly:'7 хоног бүр шинэ амт',chip_coffee:'Coffee • тун удахгүй',chip_vegan:'Vegan сонголт',chip_organic:'Organic сонголт',scroll:'Доош гүйлгэнэ үү',signature_eyebrow:'Манай байнгын онцлох 5',signature_title:'SIGNATURE 5.',signature_copy:'The Manhattan Bakery-г илэрхийлэх таван signature muffin — танил атлаа өөрийн гэсэн амттай.',drops_eyebrow:'Хязгаарлагдмал • шинэчлэгддэг • 7 хоног бүр',drops_title:'WEEKLY DROPS.',drops_copy:'Muffin menu үргэлж шинэчлэгдэнэ. Small-batch, seasonal болон New York-inspired шинэ амтууд хязгаарлагдмал хугацаанд гарна.',menu_eyebrow:'Одоогийн менюгээс захиалах',menu_title:'МЕНЮ.',menu_copy:'Launch үеэр бид muffin дээрээ төвлөрч байна. Pastry, coffee, smoothie нь дараагийн launch-д орно.',tab_all:'Бүгд',tab_muffins:'Muffin',tab_pastries:'Pastry',tab_coffee:'Coffee',tab_smoothies:'Smoothie',menu_note:'Одоогийн launch muffin menu',soon_eyebrow:'Бэлтгэгдэж байна',soon_title:'DRINKS ТУН УДАХГҮЙ.',soon_copy:'Coffee, frappe болон Manhattan-style smoothie одоогоор development шатандаа байгаа тул захиалга авахгүй.',story_eyebrow:'Бидний түүх',story_quote:'“New York roots. Ulaanbaatar made.”',story_copy:'Манай гэр бүл Нью-Йоркт бараг 10 жил амьдарсан. Брэнд бий болохоос өмнө muffin, pastry-гаа гэр бүл, найз нөхөдтэйгээ хийж хуваалцдаг байсан. The Manhattan Bakery тэр дурсамжаас эхэлсэн — Нью-Йоркийн bakery culture, амт, energy-г орчин үеийн Улаанбаатарт өөрсдийн хэв маягаар авчрах санаа.',story_card1:'Үндэс ба inspiration',story_card2:'Улаанбаатарт бүтээгдэнэ',story_card3:'House signature',story_card4:'7 хоног бүр шинэ санаа',cta_eyebrow:'The Manhattan Bakery',cta_title:'ТАНЫ ДАРААГИЙН ДУРТАЙ DROP ЗӨВХӨН НЭГ 7 ХОНОГ БАЙЖ МАГАДГҮЙ.',cta_copy:'Одоогийн muffin menu-с захиалж, promo code ашиглан хөнгөлөлт эдэлж, дараа нь бодит захиалгын төлвөө шалгаарай.',footer_loc:'Улаанбаатар, Монгол',your_bag:'ТАНЫ САГС',apply:'Ашиглах',subtotal:'Дүн',discount:'Хөнгөлөлт',total:'Нийт',checkout:'Захиалгаа үргэлжлүүлэх',checkout_title:'ЗАХИАЛГА БАТАЛГААЖУУЛАХ',checkout_sub:'Хүргэлт эсвэл өөрөө авах • бодит захиалга',delivery:'Хүргэлт',pickup:'Өөрөө авах',name:'Нэр',phone:'Утас',address:'Хүргэлтийн хаяг',notes:'Нэмэлт тайлбар',place_order:'Захиалга өгөх',tracking_title:'ЗАХИАЛГЫН ТӨЛӨВ ШАЛГАХ'
+ }
+};
+
+const sigItems=[
+ {name:'Fifth Avenue Blackout',type:'Signature Muffin',desc:{en:'Dark cocoa muffin, chocolate center, crisp cocoa crumb.',mn:'Dark cocoa muffin, chocolate center болон crisp cocoa crumb.'},price:15900,cat:'muffin'},
+ {name:'Brooklyn Berry Cheesecake',type:'Signature Muffin',desc:{en:'Blueberry muffin, cheesecake core, buttery streusel.',mn:'Blueberry muffin, cheesecake core болон buttery streusel.'},price:15900,cat:'muffin'},
+ {name:'SoHo Pistachio Cloud',type:'Signature Muffin',desc:{en:'Pistachio cream, soft vanilla crumb, roasted pistachio finish.',mn:'Pistachio cream, зөөлөн vanilla crumb, roasted pistachio finish.'},price:16900,cat:'muffin'},
+ {name:'Empire Salted Caramel',type:'Signature Muffin',desc:{en:'Caramel center, vanilla crumb and a light sea-salt finish.',mn:'Caramel center, vanilla crumb, light sea-salt finish.'},price:15900,cat:'muffin'},
+ {name:'Central Park Lemon Poppy',type:'Signature Muffin',desc:{en:'Bright lemon, poppy seed, light glaze and soft crumb.',mn:'Lemon, poppy seed, light glaze, зөөлөн crumb.'},price:14900,cat:'muffin'}
 ];
-let cart=JSON.parse(localStorage.getItem('mb_cart')||'[]'),promo='',fulfillment='delivery';
+const drops=[
+ {name:'Tribeca Tiramisu Muffin',desc:{en:'Espresso-inspired muffin with a soft cream-style center.',mn:'Espresso-inspired muffin, soft cream-style center.'},price:16900,cat:'muffin'},
+ {name:'Broadway Cinnamon Crumb',desc:{en:'Cinnamon brown-sugar muffin finished with a crisp crumb.',mn:'Cinnamon brown-sugar muffin, crisp crumb finish.'},price:15900,cat:'muffin'},
+ {name:'Chelsea Strawberry Matcha Muffin',desc:{en:'Strawberry-forward muffin with a clean matcha finish.',mn:'Strawberry muffin, clean matcha finish-тэй.'},price:16900,cat:'muffin'},
+ {name:'Manhattan Classic Blueberry',desc:{en:'Blueberry-packed house muffin with crisp streusel.',mn:'Blueberry ихтэй house muffin, crisp streusel.'},price:13900,cat:'muffin'},
+ {name:'Madison Double Chocolate',desc:{en:'Cocoa muffin with chocolate chunks and a soft center.',mn:'Cocoa muffin, chocolate chunks, зөөлөн center.'},price:14900,cat:'muffin'}
+];
+const comingSoon=[
+ {name:'Park Avenue Butter Croissant',cat:'pastry',desc:{en:'Our pastry program is being developed for a later launch.',mn:'Pastry menu дараагийн launch-д орно.'},soon:true},
+ {name:'SoHo Flat White',cat:'coffee',desc:{en:'Specialty coffee is coming in a later phase.',mn:'Specialty coffee дараагийн phase-д орно.'},soon:true},
+ {name:'Empire Caramel Frappe',cat:'coffee',desc:{en:'A Manhattan-style frappe concept in development.',mn:'Manhattan-style frappe development шатандаа.'},soon:true},
+ {name:'Manhattan Pink Cloud',cat:'smoothie',desc:{en:'A thick strawberry-forward smoothie concept.',mn:'Strawberry голлосон thick smoothie concept.'},soon:true},
+ {name:'Hudson Green',cat:'smoothie',desc:{en:'Green fruit and citrus functional-style blend.',mn:'Green fruit, citrus functional-style blend.'},soon:true}
+];
+const menuItems=[...sigItems,...drops,...comingSoon];
+const soonNames=comingSoon;
+let lang='en',cart=[],discountPct=0,activePromo='',fulfillment='delivery';
 const fmt=n=>'₮'+Math.round(n).toLocaleString('en-US');
-const signature=document.getElementById('signatureGrid');
-products.slice(0,5).forEach((p,i)=>signature.insertAdjacentHTML('beforeend',`<article class="card"><div class="num">0${i+1}</div><h3>${p.name}</h3><p>${p.desc}</p><div class="price">${fmt(p.price)}</div><button class="add" data-add="${p.name}">Add to Bag</button></article>`));
-const menuRows=document.getElementById('menuRows');
-products.forEach(p=>menuRows.insertAdjacentHTML('beforeend',`<div class="menu-row"><div class="menu-name"><b>${p.name}</b><span>${p.desc}</span></div><div><div class="menu-price">${fmt(p.price)}</div><button class="add" data-add="${p.name}">Add</button></div></div>`));
-function save(){localStorage.setItem('mb_cart',JSON.stringify(cart));renderCart()}
-function add(name){const p=products.find(x=>x.name===name);if(!p)return;const row=cart.find(x=>x.name===name);row?row.qty++:cart.push({...p,qty:1});save();openDrawer()}
-document.addEventListener('click',e=>{const n=e.target.dataset.add;if(n)add(n)});
-function totals(){const subtotal=cart.reduce((s,x)=>s+x.price*x.qty,0);const pct=promo==='MANHATTAN10'?.1:promo==='DROP5'?.05:0;const discount=Math.round(subtotal*pct);return{subtotal,discount,total:subtotal-discount}}
-function renderCart(){document.getElementById('bagCount').textContent=cart.reduce((s,x)=>s+x.qty,0);const box=document.getElementById('cartItems');box.innerHTML=cart.length?'':'<p style="color:#777">Your bag is empty.</p>';cart.forEach((x,i)=>box.insertAdjacentHTML('beforeend',`<div class="cart-row"><div><b>${x.name}</b><div class="qty"><button data-minus="${i}">−</button><span>${x.qty}</span><button data-plus="${i}">+</button></div></div><div>${fmt(x.price*x.qty)}</div></div>`));const t=totals();subtotal.textContent=fmt(t.subtotal);discount.textContent='−'+fmt(t.discount);total.textContent=fmt(t.total)}
-document.getElementById('cartItems').onclick=e=>{if(e.target.dataset.plus!==undefined){cart[+e.target.dataset.plus].qty++;save()}if(e.target.dataset.minus!==undefined){const i=+e.target.dataset.minus;cart[i].qty--;if(cart[i].qty<=0)cart.splice(i,1);save()}};
-function openDrawer(){drawer.classList.add('open');overlay.classList.add('open')}function closeDrawer(){drawer.classList.remove('open');overlay.classList.remove('open')}
-bagBtn.onclick=openDrawer;bagClose.onclick=closeDrawer;overlay.onclick=closeDrawer;
-promoBtn.onclick=()=>{const v=promoInput.value.trim().toUpperCase();promo=v==='MANHATTAN10'||v==='DROP5'?v:'';promoMsg.textContent=promo?'Promo applied.':v?'Invalid promo code.':'';renderCart()};
-function openModal(id){document.getElementById(id).classList.add('open')}function closeModals(){document.querySelectorAll('.modal').forEach(x=>x.classList.remove('open'))}
-document.querySelectorAll('.modalClose').forEach(x=>x.onclick=closeModals);document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)closeModals()}));
-checkoutBtn.onclick=()=>{if(!cart.length)return;closeDrawer();openModal('checkoutModal')};trackTop.onclick=()=>openModal('trackModal');
-document.querySelectorAll('[data-fulfill]').forEach(b=>b.onclick=()=>{fulfillment=b.dataset.fulfill;document.querySelectorAll('[data-fulfill]').forEach(x=>x.classList.toggle('active',x===b));addressField.classList.toggle('hidden',fulfillment==='pickup')});
-payBtn.onclick=async()=>{const err=checkoutError;err.textContent='';const payload={name:custName.value.trim(),phone:custPhone.value.trim(),email:custEmail.value.trim(),address:custAddress.value.trim(),notes:custNotes.value.trim(),fulfillment,marketingOptIn:checkoutMarketing.checked,promo,items:cart.map(x=>({name:x.name,qty:x.qty}))};if(!payload.name||!payload.phone||!payload.email||(fulfillment==='delivery'&&!payload.address)){err.textContent='Complete your name, phone, email and delivery address.';return}payBtn.disabled=true;payBtn.textContent='Opening secure payment…';try{const r=await fetch('/.netlify/functions/create-byl-checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const d=await r.json();if(!r.ok)throw new Error(d.error||'Could not start payment');sessionStorage.setItem('mb_pending_order',JSON.stringify({id:d.order.id,phone:payload.phone}));location.href=d.checkoutUrl}catch(e){err.textContent=e.message;payBtn.disabled=false;payBtn.textContent='Continue to BYL / QPay'}};
-async function lookup(){const id=trackId.value.trim(),phone=trackPhone.value.trim();trackResult.classList.remove('hidden');trackResult.textContent='Checking…';try{const r=await fetch(`/.netlify/functions/order-status?id=${encodeURIComponent(id)}&phone=${encodeURIComponent(phone)}`);const d=await r.json();if(!r.ok)throw new Error(d.error||'Order not found');trackResult.innerHTML=`<div class="track-status">${String(d.status).replaceAll('_',' ').toUpperCase()}</div><p><b>${d.id}</b><br>${d.fulfillment==='pickup'?'Pickup':'Delivery'} • ${fmt(d.total)}</p><div>${d.items.map(x=>`${x.qty} × ${x.name}`).join('<br>')}</div>`}catch(e){trackResult.textContent=e.message}}trackLookup.onclick=lookup;
-signupSubmit.onclick=async()=>{signupMsg.textContent='';const payload={name:signupName.value.trim(),email:signupEmail.value.trim(),consent:signupConsent.checked};if(!payload.email||!payload.consent){signupMsg.textContent='Enter your email and tick the consent box.';return}signupSubmit.disabled=true;try{const r=await fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const d=await r.json();if(!r.ok)throw new Error(d.error||'Could not subscribe');localStorage.setItem('mb_list_joined','1');signupMsg.className='error ok';signupMsg.textContent='You’re on the list.';setTimeout(closeModals,900)}catch(e){signupMsg.textContent=e.message}finally{signupSubmit.disabled=false}};
-function startup(){renderCart();const p=new URLSearchParams(location.search),pending=(()=>{try{return JSON.parse(sessionStorage.getItem('mb_pending_order')||'null')}catch{return null}})();if(p.get('payment')==='success'&&p.get('order')){trackId.value=p.get('order');if(pending?.phone)trackPhone.value=pending.phone;openModal('trackModal');trackResult.classList.remove('hidden');trackResult.innerHTML='<b>Payment returned successfully.</b><br>We are confirming it with BYL now.';setTimeout(lookup,1600);history.replaceState({},'',location.pathname)}else if(p.get('track')){trackId.value=p.get('track');openModal('trackModal')}else if(!localStorage.getItem('mb_list_joined')&&!localStorage.getItem('mb_list_skipped'))setTimeout(()=>openModal('signupModal'),1300)}
-document.querySelector('#signupModal .modalClose').addEventListener('click',()=>localStorage.setItem('mb_list_skipped',String(Date.now())));
-startup();
+
+function renderSignature(){document.getElementById('signatureGrid').innerHTML=sigItems.map((x,i)=>`<article class="sig-card" data-num="0${i+1}"><div><div class="sig-type">${x.type}</div><h3>${x.name}</h3><p>${x.desc[lang]}</p></div><div class="sig-price"><span>${fmt(x.price)}</span><button class="add-small" onclick="addItem('${encodeURIComponent(x.name)}')">+</button></div></article>`).join('')}
+function renderDrops(){document.getElementById('dropTrack').innerHTML=drops.map(x=>`<article class="drop-card"><div class="drop-tag">Weekly Drop</div><div><h3>${x.name}</h3><p>${x.desc[lang]}</p><button class="shop-inline" onclick="addItem('${encodeURIComponent(x.name)}')">${lang==='mn'?'Сагсанд нэмэх':'Add to bag'} • ${fmt(x.price)}</button></div></article>`).join('')}
+function renderMenu(filter='all'){document.getElementById('menuGrid').innerHTML=menuItems.filter(x=>filter==='all'||x.cat===filter).map(x=>`<article class="menu-item ${x.soon?'soon':''}"><div><h4>${x.name}</h4><p>${x.desc[lang]}</p></div><div class="menu-actions">${x.soon?`<span class="soon-badge">${lang==='mn'?'Тун удахгүй':'Coming soon'}</span>`:`<span class="price">${fmt(x.price)}</span><button class="add-btn" onclick="addItem('${encodeURIComponent(x.name)}')">${lang==='mn'?'Сагсанд нэмэх':'Add to bag'}</button>`}</div></article>`).join('')}
+function renderSoon(){document.getElementById('soonList').innerHTML=soonNames.map(x=>`<div class="soon-card"><b>${x.name}</b><span>${x.desc[lang]}</span></div>`).join('')}
+function addItem(encoded){const name=decodeURIComponent(encoded),item=menuItems.find(x=>x.name===name);if(!item||item.soon)return;const found=cart.find(x=>x.name===name);found?found.qty++:cart.push({...item,qty:1});renderCart();openCart()}
+function changeQty(encoded,d){const name=decodeURIComponent(encoded),item=cart.find(x=>x.name===name);if(!item)return;item.qty+=d;if(item.qty<=0)cart=cart.filter(x=>x.name!==name);renderCart()}
+function removeItem(encoded){const name=decodeURIComponent(encoded);cart=cart.filter(x=>x.name!==name);renderCart()}
+function cartTotals(){const sub=cart.reduce((s,x)=>s+x.price*x.qty,0),disc=Math.round(sub*discountPct);return{sub,disc,total:sub-disc}}
+function renderCart(){document.getElementById('bagCount').textContent=cart.reduce((s,x)=>s+x.qty,0);const box=document.getElementById('cartItems');if(!cart.length)box.innerHTML=`<div class="empty-cart">${lang==='mn'?'Таны сагс хоосон байна.<br>Muffin menu-с сонгоорой.':'Your bag is empty.<br>Add a muffin from the menu.'}</div>`;else box.innerHTML=cart.map(x=>`<div class="cart-row"><div><b>${x.name}</b><small>${fmt(x.price)} × ${x.qty}</small><div class="cart-controls"><button class="qty" onclick="changeQty('${encodeURIComponent(x.name)}',-1)">−</button><span>${x.qty}</span><button class="qty" onclick="changeQty('${encodeURIComponent(x.name)}',1)">+</button><button class="remove" onclick="removeItem('${encodeURIComponent(x.name)}')">${lang==='mn'?'Устгах':'Remove'}</button></div></div><strong>${fmt(x.price*x.qty)}</strong></div>`).join('');const t=cartTotals();document.getElementById('subtotal').textContent=fmt(t.sub);document.getElementById('discount').textContent='−'+fmt(t.disc);document.getElementById('total').textContent=fmt(t.total)}
+function openCart(){document.getElementById('cartDrawer').classList.add('open');document.getElementById('drawerOverlay').classList.add('open')}
+function closeCart(){document.getElementById('cartDrawer').classList.remove('open');document.getElementById('drawerOverlay').classList.remove('open')}
+function applyLang(newLang){lang=newLang;document.documentElement.lang=lang;document.querySelectorAll('.lang').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.dataset.i18n;if(translations[lang][key])el.textContent=translations[lang][key]});renderSignature();renderDrops();const active=document.querySelector('.tab.active')?.dataset.filter||'all';renderMenu(active);renderSoon();renderCart();updatePaymentSummary()}
+function updatePaymentSummary(){document.getElementById('paymentSummary').textContent=fulfillment==='pickup'?(lang==='mn'?'Төлбөр: авах үедээ төлнө.':'Payment: pay when you collect your order.'):(lang==='mn'?'Төлбөр: хүргэлт дээр бэлнээр төлнө.':'Payment: cash on delivery.')}
+
+renderSignature();renderDrops();renderMenu();renderSoon();renderCart();
+document.querySelectorAll('.lang').forEach(b=>b.onclick=()=>applyLang(b.dataset.lang));
+document.querySelector('.mobile-menu').onclick=()=>document.querySelector('.nav-links').classList.toggle('open');
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderMenu(b.dataset.filter)});
+document.getElementById('dropPrev').onclick=()=>document.getElementById('dropTrack').scrollBy({left:-450,behavior:'smooth'});document.getElementById('dropNext').onclick=()=>document.getElementById('dropTrack').scrollBy({left:450,behavior:'smooth'});
+document.getElementById('bagOpen').onclick=openCart;document.getElementById('bagClose').onclick=closeCart;document.getElementById('drawerOverlay').onclick=closeCart;
+document.getElementById('promoApply').onclick=()=>{const code=document.getElementById('promoInput').value.trim().toUpperCase(),msg=document.getElementById('promoMsg');if(code==='MANHATTAN10'){discountPct=.10;activePromo=code;msg.textContent=lang==='mn'?'MANHATTAN10 — 10% хөнгөлөлт.':'MANHATTAN10 — 10% discount applied.'}else if(code==='DROP5'){discountPct=.05;activePromo=code;msg.textContent=lang==='mn'?'DROP5 — 5% хөнгөлөлт.':'DROP5 — 5% discount applied.'}else{discountPct=0;activePromo='';msg.textContent=lang==='mn'?'Promo code олдсонгүй.':'Promo code not recognized.'}renderCart()};
+
+const modal=id=>document.getElementById(id);document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>modal(b.dataset.close).classList.remove('open'));
+document.getElementById('checkoutOpen').onclick=()=>{if(!cart.length){document.getElementById('promoMsg').textContent=lang==='mn'?'Эхлээд muffin нэмнэ үү.':'Add a muffin first.';return}closeCart();document.getElementById('orderError').textContent='';modal('checkoutModal').classList.add('open')};
+document.querySelectorAll('.fulfill-btn').forEach(b=>b.onclick=()=>{fulfillment=b.dataset.mode;document.querySelectorAll('.fulfill-btn').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.delivery-field').forEach(x=>x.classList.toggle('hidden',fulfillment==='pickup'));updatePaymentSummary()});
+
+async function placeOrder(){const btn=document.getElementById('placeOrder'),err=document.getElementById('orderError');err.className='order-error';err.textContent='';const payload={name:document.getElementById('custName').value.trim(),phone:document.getElementById('custPhone').value.trim(),email:document.getElementById('custEmail').value.trim(),address:document.getElementById('custAddress').value.trim(),notes:document.getElementById('custNotes').value.trim(),fulfillment,marketingOptIn:document.getElementById('checkoutMarketing').checked,promo:activePromo,items:cart.map(x=>({name:x.name,qty:x.qty}))};if(!payload.name||!payload.phone||!payload.email||(fulfillment==='delivery'&&!payload.address)){err.textContent=lang==='mn'?'Нэр, утас, email болон хүргэлтийн хаягаа бөглөнө үү.':'Please complete your name, phone, email and delivery address.';return}btn.disabled=true;btn.textContent=lang==='mn'?'Илгээж байна…':'Placing order…';try{const r=await fetch('/.netlify/functions/create-order',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const d=await r.json();if(!r.ok)throw new Error(d.error||'Order failed');modal('checkoutModal').classList.remove('open');cart=[];discountPct=0;activePromo='';renderCart();document.getElementById('trackId').value=d.order.id;document.getElementById('trackPhone').value=payload.phone;showTrackResult({id:d.order.id,status:'received',fulfillment:d.order.fulfillment,total:d.order.total,items:payload.items,updatedAt:new Date().toISOString()},true);modal('trackerModal').classList.add('open');}catch(e){err.textContent=e.message||'Could not place order.'}finally{btn.disabled=false;btn.textContent=translations[lang].place_order}}
+document.getElementById('placeOrder').onclick=placeOrder;
+
+const statusText={received:{en:'Order received',mn:'Захиалга хүлээн авсан'},preparing:{en:'Preparing your order',mn:'Захиалгыг бэлтгэж байна'},ready:{en:'Ready',mn:'Бэлэн болсон'},out_for_delivery:{en:'Out for delivery',mn:'Хүргэлтэнд гарсан'},delivered:{en:'Delivered',mn:'Хүргэгдсэн'},cancelled:{en:'Cancelled',mn:'Цуцлагдсан'}};
+function showTrackResult(o,newOrder=false){const box=document.getElementById('trackResult');box.classList.remove('hidden');const s=statusText[o.status]?.[lang]||o.status;box.innerHTML=`<h4>${newOrder?(lang==='mn'?'ЗАХИАЛГА БАТАЛГААЖЛАА':'ORDER CONFIRMED'):s}</h4><div class="track-status">${s}</div><p><strong>${o.id}</strong><br>${o.fulfillment==='pickup'?(lang==='mn'?'Өөрөө авах':'Pickup'):(lang==='mn'?'Хүргэлт':'Delivery')}${o.total?` • ${fmt(o.total)}`:''}</p><p>${newOrder?(lang==='mn'?'Захиалгын дугаараа хадгалаарай. Email confirmation мөн илгээгдэнэ.':'Save your order number. A confirmation email will also be sent.'):(lang==='mn'?'Энэ төлөвийг манай баг бодитоор шинэчилнэ.':'This status is updated by our team as your order moves forward.')}</p>${o.items?.length?`<div class="track-items">${o.items.map(x=>`${x.qty} × ${x.name}`).join('<br>')}</div>`:''}`}
+async function lookupOrder(){const id=document.getElementById('trackId').value.trim(),phone=document.getElementById('trackPhone').value.trim(),box=document.getElementById('trackResult');if(!id||!phone){box.classList.remove('hidden');box.innerHTML='<p>Enter your order number and phone.</p>';return}box.classList.remove('hidden');box.innerHTML='<p>Checking…</p>';try{const r=await fetch(`/.netlify/functions/order-status?id=${encodeURIComponent(id)}&phone=${encodeURIComponent(phone)}`);const d=await r.json();if(!r.ok)throw new Error(d.error||'Order not found');showTrackResult(d)}catch(e){box.innerHTML=`<p>${e.message}</p>`}}
+document.getElementById('trackLookup').onclick=lookupOrder;
+document.getElementById('trackOpen').onclick=()=>modal('trackerModal').classList.add('open');
+
+function maybeOpenSignup(){const joined=localStorage.getItem('mb_list_joined'),skipped=Number(localStorage.getItem('mb_list_skipped')||0);if(joined)return;if(skipped && Date.now()-skipped<7*24*60*60*1000)return;setTimeout(()=>modal('signupModal').classList.add('open'),1400)}
+document.getElementById('signupClose').onclick=()=>{modal('signupModal').classList.remove('open');localStorage.setItem('mb_list_skipped',String(Date.now()))};
+document.getElementById('signupSubmit').onclick=async()=>{const name=document.getElementById('signupName').value.trim(),email=document.getElementById('signupEmail').value.trim(),consent=document.getElementById('signupConsent').checked,msg=document.getElementById('signupMsg'),btn=document.getElementById('signupSubmit');msg.className='order-error';if(!email||!consent){msg.textContent='Enter your email and tick the consent box.';return}btn.disabled=true;btn.textContent='Joining…';try{const r=await fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,email,consent})});const d=await r.json();if(!r.ok)throw new Error(d.error||'Could not subscribe');localStorage.setItem('mb_list_joined','1');msg.className='order-error ok';msg.textContent='You’re on the list.';setTimeout(()=>modal('signupModal').classList.remove('open'),1000)}catch(e){msg.textContent=e.message}finally{btn.disabled=false;btn.textContent='Join the list'}};
+
+const params=new URLSearchParams(location.search);if(params.get('track')){document.getElementById('trackId').value=params.get('track');modal('trackerModal').classList.add('open')}else{maybeOpenSignup()}
+document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m&&m.id!=='signupModal')m.classList.remove('open')}));
 </script>
 </body>
 </html>
