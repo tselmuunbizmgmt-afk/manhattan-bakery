@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Manhattan Bakery | Ulaanbaatar</title>
+<meta name="description" content="New York-inspired bakery in Ulaanbaatar. Signature muffins, weekly drops, and more coming soon.">
+<link rel="canonical" href="https://manhattanbakery.online/">
+<meta name="theme-color" content="#070707">
+<style>
+:root{--bg:#070707;--panel:#101010;--line:#272727;--ink:#f5f1e9;--muted:#969696;--cream:#eee9df}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.hidden{display:none!important}
+.nav{position:fixed;top:0;left:0;right:0;height:76px;z-index:50;display:grid;grid-template-columns:auto 1fr auto;align-items:center;padding:0 4.5vw;background:rgba(7,7,7,.86);backdrop-filter:blur(18px);border-bottom:1px solid #1c1c1c}
+.brand img{width:148px;height:58px;object-fit:contain}.links{justify-self:center;display:flex;gap:26px;text-transform:uppercase;font-size:10px;letter-spacing:.17em;color:#aaa}.actions{display:flex;gap:8px}.pill{border:1px solid #343434;background:#111;color:#fff;border-radius:999px;padding:11px 14px;font-size:10px;text-transform:uppercase;letter-spacing:.12em}.light{background:var(--cream);color:#070707;border-color:var(--cream);font-weight:700}
+.hero{min-height:100vh;padding:122px 5vw 70px;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 28%,rgba(255,255,255,.07),transparent 27%),linear-gradient(#090909,#050505)}
+.hero-inner{width:min(1140px,100%)}.kicker{text-transform:uppercase;letter-spacing:.42em;font-size:10px;color:#aaa;margin-bottom:28px}.hero-logo{width:min(720px,84vw);margin:0 auto 46px}.hero-logo img{width:100%;display:block}.hero h1{font-size:clamp(46px,7vw,98px);line-height:.9;letter-spacing:-.045em;margin:0 auto;max-width:1040px}.slogan{font-family:Georgia,serif;font-style:italic;font-size:clamp(22px,3vw,36px);color:#ddd6ca;margin:30px 0 14px}.hero p{max-width:680px;margin:auto;color:#969696;line-height:1.8}.hero-buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{border:1px solid #e9e5dc;background:transparent;color:#fff;border-radius:999px;padding:15px 22px;text-transform:uppercase;letter-spacing:.14em;font-size:10px;font-weight:700}.btn.primary{background:#ece8de;color:#070707}
+.marquee{border-block:1px solid #1e1e1e;overflow:hidden;background:#0c0c0c}.marquee div{white-space:nowrap;padding:15px;font-size:15px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#d7d2c9}
+.section{padding:92px 5vw}.eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:9px;color:#757575}.section h2{font-size:clamp(38px,6vw,76px);line-height:.95;letter-spacing:-.04em;margin:12px 0}.lead{max-width:680px;color:#8d8d8d;line-height:1.8}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:40px}.card{border:1px solid #252525;border-radius:22px;background:linear-gradient(145deg,#141414,#0c0c0c);padding:24px;min-height:290px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}.card:before{content:"";position:absolute;inset:auto -20% 42% -20%;height:160px;background:radial-gradient(circle,rgba(255,255,255,.08),transparent 67%)}.num{position:absolute;top:18px;right:18px;color:#494949;font-size:11px}.card h3{font-size:22px;margin:0 0 8px}.card p{color:#777;font-size:12px;line-height:1.65}.price{margin-top:15px;font-weight:700}.add{margin-top:16px;width:100%;border:1px solid #3a3a3a;background:#151515;color:#fff;border-radius:999px;padding:12px;font-size:9px;text-transform:uppercase;letter-spacing:.13em}.coming{color:#777;border-color:#292929}
+.dark{background:#0b0b0b}.menu-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:14px;margin-top:38px}.menu-box{border:1px solid #242424;border-radius:24px;padding:28px;background:#101010}.menu-row{display:flex;justify-content:space-between;gap:18px;padding:17px 0;border-bottom:1px solid #222}.menu-row:last-child{border-bottom:0}.menu-name b{display:block}.menu-name span{font-size:11px;color:#777;line-height:1.5}.menu-price{white-space:nowrap;font-weight:700}
+.soon-list{display:grid;gap:10px;margin-top:18px}.soon-item{border:1px solid #272727;border-radius:15px;padding:18px;display:flex;justify-content:space-between;color:#aaa}.soon-item b{color:#fff}.badge{font-size:9px;text-transform:uppercase;letter-spacing:.13em}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.story-copy{color:#949494;line-height:1.9}.quote{font-family:Georgia,serif;font-size:clamp(30px,4vw,55px);line-height:1.1}
+.footer{border-top:1px solid #1f1f1f;padding:38px 5vw 50px;display:flex;justify-content:space-between;gap:24px;align-items:center;color:#6d6d6d;font-size:10px}.footer img{width:130px}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:80;opacity:0;pointer-events:none;transition:.2s}.overlay.open{opacity:1;pointer-events:auto}.drawer{position:fixed;z-index:90;right:0;top:0;bottom:0;width:min(440px,100%);background:#0c0c0c;border-left:1px solid #272727;transform:translateX(105%);transition:.3s;padding:24px;display:flex;flex-direction:column}.drawer.open{transform:none}.drawer-head{display:flex;justify-content:space-between;align-items:center}.drawer h3{font-size:28px}.x{border:0;background:none;color:#fff;font-size:27px}.cart-items{flex:1;overflow:auto}.cart-row{display:grid;grid-template-columns:1fr auto;gap:10px;padding:16px 0;border-bottom:1px solid #222}.qty{display:flex;gap:8px;align-items:center;margin-top:7px}.qty button{width:26px;height:26px;border-radius:50%;border:1px solid #333;background:#111;color:#fff}.totals{padding-top:18px}.total-line{display:flex;justify-content:space-between;margin:9px 0;color:#999}.grand{font-size:18px;color:#fff}.promo{display:flex;gap:8px}.promo input{flex:1;background:#111;border:1px solid #303030;color:#fff;border-radius:12px;padding:12px}.promo button{border:1px solid #333;background:#171717;color:#fff;border-radius:12px;padding:0 14px}.wide{width:100%;margin-top:15px}
+.modal{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.78);display:grid;place-items:center;padding:20px;opacity:0;pointer-events:none;transition:.2s}.modal.open{opacity:1;pointer-events:auto}.modal-card{width:min(760px,100%);max-height:92vh;overflow:auto;background:#0d0d0d;border:1px solid #292929;border-radius:25px;padding:26px}.modal-top{display:flex;justify-content:space-between;align-items:start}.modal-top h3{font-size:32px;margin:0}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#777}.field input,.field textarea{background:#111;border:1px solid #303030;color:#fff;border-radius:12px;padding:13px;outline:none}.field textarea{min-height:88px;resize:vertical}.fulfill{display:flex;gap:8px;margin-top:14px}.fulfill button{flex:1;padding:12px;border:1px solid #333;background:#111;color:#999;border-radius:12px}.fulfill .active{background:#eee9df;color:#080808}.error{min-height:18px;color:#d9a5a5;font-size:11px;margin-top:10px}.ok{color:#b7c7ac}
+.track-status{font-size:28px;margin:18px 0}.track-items{border-top:1px solid #262626;padding-top:12px;color:#aaa;line-height:1.7}
+.signup-card{text-align:center;max-width:520px}.signup-card p{color:#919191;line-height:1.7}.consent{display:flex;gap:10px;text-align:left;color:#8d8d8d;font-size:11px;line-height:1.5;margin-top:12px}.consent input{margin-top:3px}
+@media(max-width:1050px){.grid{grid-template-columns:repeat(2,1fr)}.menu-grid,.story{grid-template-columns:1fr}.links{display:none}}@media(max-width:700px){.nav{grid-template-columns:1fr auto;height:68px}.brand img{width:120px}.track-top{display:none}.hero{padding-top:105px}.hero-logo{width:92vw;margin-bottom:35px}.grid{grid-template-columns:1fr}.section{padding:72px 5vw}.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.footer{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<nav class="nav">
+<a class="brand" href="#top"><img src="https://6aad01edce4d802daf6812c6--manhattanbakery.netlify.app/manhattan-bakery-logo-hd.png" alt="The Manhattan Bakery"></a>
+<div class="links"><a href="#signature">Signature 5</a><a href="#menu">Menu</a><a href="#story">Our Story</a></div>
+<div class="actions"><button class="pill track-top" id="trackTop">Track Order</button><button class="pill light" id="bagBtn">Bag <span id="bagCount">0</span></button></div>
+</nav>
+<main id="top">
+<section class="hero">
+<div class="hero-inner">
+<div class="kicker">New York roots • Ulaanbaatar made</div>
+<div class="hero-logo"><img src="https://6aad01edce4d802daf6812c6--manhattanbakery.netlify.app/manhattan-bakery-logo-hd.png" alt="The Manhattan Bakery"></div>
+<h1>NEW YORK BAKERY CULTURE, REIMAGINED IN ULAANBAATAR.</h1>
+<div class="slogan">A little taste of Manhattan in every sip &amp; bite.</div>
+<p>Signature muffins and weekly drops — built around quality, bold flavor and a little piece of New York. Drinks, coffee and smoothies are coming soon.</p>
+<div class="hero-buttons"><a class="btn primary" href="#menu">Shop Muffins</a><a class="btn" href="#signature">Explore Signature 5</a></div>
+</div>
+</section>
+<div class="marquee"><div>WEEKLY MUFFIN DROPS • SMALL BATCH • NEW YORK ROOTS • ULAANBAATAR MADE • DRINKS COMING SOON • WEEKLY MUFFIN DROPS • SMALL BATCH</div></div>
+<section class="section" id="signature">
+<div class="eyebrow">The Signature 5</div><h2>FIVE MUFFINS.<br>OUR STARTING LINEUP.</h2>
+<p class="lead">The five signatures we want Manhattan Bakery to be known for. Orderable now through our secure BYL/QPay checkout.</p>
+<div class="grid" id="signatureGrid"></div>
+</section>
+<section class="section dark" id="menu">
+<div class="eyebrow">Menu</div><h2>MUFFINS NOW.<br>EVERYTHING ELSE SOON.</h2>
+<div class="menu-grid">
+<div class="menu-box"><h3>Muffins</h3><div id="menuRows"></div></div>
+<div class="menu-box"><h3>Coming Soon</h3><p class="lead">We’re keeping launch focused. All drinks are temporarily coming soon.</p>
+<div class="soon-list"><div class="soon-item"><b>Specialty Coffee</b><span class="badge">Coming Soon</span></div><div class="soon-item"><b>Frappes</b><span class="badge">Coming Soon</span></div><div class="soon-item"><b>Smoothies</b><span class="badge">Coming Soon</span></div><div class="soon-item"><b>Matcha & Tea</b><span class="badge">Coming Soon</span></div><div class="soon-item"><b>Pastries</b><span class="badge">Coming Soon</span></div></div>
+</div>
+</div>
+</section>
+<section class="section" id="story"><div class="story"><div class="quote">From years in New York to a bakery built for Ulaanbaatar.</div><div class="story-copy">Our family spent nearly a decade living in New York, making muffins and pastries for family, friends and the people around us. What began in a small circle eventually became the idea for The Manhattan Bakery — bringing the bakery culture, flavors and atmosphere we loved to Ulaanbaatar in our own way.</div></div></section>
+</main>
+<footer class="footer"><img src="https://6aad01edce4d802daf6812c6--manhattanbakery.netlify.app/manhattan-bakery-logo-hd.png" alt="The Manhattan Bakery"><div>Ulaanbaatar, Mongolia • © 2026 The Manhattan Bakery</div></footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer"><div class="drawer-head"><h3>Your Bag</h3><button class="x" id="bagClose">×</button></div><div class="cart-items" id="cartItems"></div><div class="totals"><div class="promo"><input id="promoInput" placeholder="Promo code"><button id="promoBtn">Apply</button></div><div class="error" id="promoMsg"></div><div class="total-line"><span>Subtotal</span><span id="subtotal">₮0</span></div><div class="total-line"><span>Discount</span><span id="discount">−₮0</span></div><div class="total-line grand"><span>Total</span><span id="total">₮0</span></div><button class="btn primary wide" id="checkoutBtn">Continue to Checkout</button></div></aside>
+
+<div class="modal" id="checkoutModal"><div class="modal-card"><div class="modal-top"><div><div class="eyebrow">Secure Checkout</div><h3>Customer details</h3></div><button class="x modalClose">×</button></div>
+<div class="fulfill"><button class="active" data-fulfill="delivery">Delivery</button><button data-fulfill="pickup">Pickup</button></div>
+<div class="fields"><div class="field"><label>Name</label><input id="custName"></div><div class="field"><label>Phone</label><input id="custPhone" placeholder="+976"></div><div class="field full"><label>Email</label><input id="custEmail" type="email"></div><div class="field full" id="addressField"><label>Delivery address</label><input id="custAddress"></div><div class="field full"><label>Order notes</label><textarea id="custNotes"></textarea></div></div>
+<label class="consent"><input id="checkoutMarketing" type="checkbox"> <span>Send me grand opening updates, weekly muffin drops and limited releases by email. I can unsubscribe anytime.</span></label>
+<div class="error" id="checkoutError"></div><button class="btn primary wide" id="payBtn">Continue to BYL / QPay</button><p style="color:#666;font-size:10px;line-height:1.5">Payment is completed on BYL’s secure checkout. Your order is only confirmed after BYL reports a successful payment.</p></div></div>
+
+<div class="modal" id="trackModal"><div class="modal-card"><div class="modal-top"><div><div class="eyebrow">Order status</div><h3>Track your order</h3></div><button class="x modalClose">×</button></div><div class="fields"><div class="field"><label>Order number</label><input id="trackId" placeholder="MB-..."></div><div class="field"><label>Phone</label><input id="trackPhone"></div></div><button class="btn primary wide" id="trackLookup">Check Status</button><div id="trackResult" class="track-items hidden"></div></div></div>
+
+<div class="modal" id="signupModal"><div class="modal-card signup-card"><button class="x modalClose" style="float:right">×</button><div class="eyebrow">Be first to know</div><h3 style="font-size:36px;margin:14px 0">Manhattan Bakery updates.</h3><p>Join for grand opening news, weekly muffin drops and limited flavors.</p><div class="fields"><div class="field"><label>Name</label><input id="signupName"></div><div class="field"><label>Email</label><input id="signupEmail" type="email"></div></div><label class="consent"><input id="signupConsent" type="checkbox"> <span>I agree to receive marketing emails from The Manhattan Bakery and understand I can unsubscribe anytime.</span></label><div class="error" id="signupMsg"></div><button class="btn primary wide" id="signupSubmit">Join the List</button></div></div>
+
+<script>
+const LOGO='https://6aad01edce4d802daf6812c6--manhattanbakery.netlify.app/manhattan-bakery-logo-hd.png';
+const products=[
+{name:'Fifth Avenue Blackout',price:15900,desc:'Dark chocolate muffin with a rich cocoa crumb.'},
+{name:'Brooklyn Berry Cheesecake',price:15900,desc:'Berry muffin with a cheesecake-inspired center.'},
+{name:'SoHo Pistachio Cloud',price:16900,desc:'Pistachio-forward muffin with a soft, premium finish.'},
+{name:'Empire Salted Caramel',price:15900,desc:'Caramel muffin balanced with a touch of sea salt.'},
+{name:'Central Park Lemon Poppy',price:14900,desc:'Bright lemon and poppy seed with a soft crumb.'},
+{name:'Tribeca Tiramisu Muffin',price:16900,desc:'Coffee-cocoa inspired muffin.'},
+{name:'Broadway Cinnamon Crumb',price:15900,desc:'Cinnamon muffin with a generous crumb top.'},
+{name:'Chelsea Strawberry Matcha Muffin',price:16900,desc:'Strawberry and matcha-inspired muffin.'},
+{name:'Manhattan Classic Blueberry',price:13900,desc:'Classic blueberry, Manhattan Bakery style.'},
+{name:'Madison Double Chocolate',price:14900,desc:'Double chocolate with a soft bakery crumb.'}
+];
+let cart=JSON.parse(localStorage.getItem('mb_cart')||'[]'),promo='',fulfillment='delivery';
+const fmt=n=>'₮'+Math.round(n).toLocaleString('en-US');
+const signature=document.getElementById('signatureGrid');
+products.slice(0,5).forEach((p,i)=>signature.insertAdjacentHTML('beforeend',`<article class="card"><div class="num">0${i+1}</div><h3>${p.name}</h3><p>${p.desc}</p><div class="price">${fmt(p.price)}</div><button class="add" data-add="${p.name}">Add to Bag</button></article>`));
+const menuRows=document.getElementById('menuRows');
+products.forEach(p=>menuRows.insertAdjacentHTML('beforeend',`<div class="menu-row"><div class="menu-name"><b>${p.name}</b><span>${p.desc}</span></div><div><div class="menu-price">${fmt(p.price)}</div><button class="add" data-add="${p.name}">Add</button></div></div>`));
+function save(){localStorage.setItem('mb_cart',JSON.stringify(cart));renderCart()}
+function add(name){const p=products.find(x=>x.name===name);if(!p)return;const row=cart.find(x=>x.name===name);row?row.qty++:cart.push({...p,qty:1});save();openDrawer()}
+document.addEventListener('click',e=>{const n=e.target.dataset.add;if(n)add(n)});
+function totals(){const subtotal=cart.reduce((s,x)=>s+x.price*x.qty,0);const pct=promo==='MANHATTAN10'?.1:promo==='DROP5'?.05:0;const discount=Math.round(subtotal*pct);return{subtotal,discount,total:subtotal-discount}}
+function renderCart(){document.getElementById('bagCount').textContent=cart.reduce((s,x)=>s+x.qty,0);const box=document.getElementById('cartItems');box.innerHTML=cart.length?'':'<p style="color:#777">Your bag is empty.</p>';cart.forEach((x,i)=>box.insertAdjacentHTML('beforeend',`<div class="cart-row"><div><b>${x.name}</b><div class="qty"><button data-minus="${i}">−</button><span>${x.qty}</span><button data-plus="${i}">+</button></div></div><div>${fmt(x.price*x.qty)}</div></div>`));const t=totals();subtotal.textContent=fmt(t.subtotal);discount.textContent='−'+fmt(t.discount);total.textContent=fmt(t.total)}
+document.getElementById('cartItems').onclick=e=>{if(e.target.dataset.plus!==undefined){cart[+e.target.dataset.plus].qty++;save()}if(e.target.dataset.minus!==undefined){const i=+e.target.dataset.minus;cart[i].qty--;if(cart[i].qty<=0)cart.splice(i,1);save()}};
+function openDrawer(){drawer.classList.add('open');overlay.classList.add('open')}function closeDrawer(){drawer.classList.remove('open');overlay.classList.remove('open')}
+bagBtn.onclick=openDrawer;bagClose.onclick=closeDrawer;overlay.onclick=closeDrawer;
+promoBtn.onclick=()=>{const v=promoInput.value.trim().toUpperCase();promo=v==='MANHATTAN10'||v==='DROP5'?v:'';promoMsg.textContent=promo?'Promo applied.':v?'Invalid promo code.':'';renderCart()};
+function openModal(id){document.getElementById(id).classList.add('open')}function closeModals(){document.querySelectorAll('.modal').forEach(x=>x.classList.remove('open'))}
+document.querySelectorAll('.modalClose').forEach(x=>x.onclick=closeModals);document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)closeModals()}));
+checkoutBtn.onclick=()=>{if(!cart.length)return;closeDrawer();openModal('checkoutModal')};trackTop.onclick=()=>openModal('trackModal');
+document.querySelectorAll('[data-fulfill]').forEach(b=>b.onclick=()=>{fulfillment=b.dataset.fulfill;document.querySelectorAll('[data-fulfill]').forEach(x=>x.classList.toggle('active',x===b));addressField.classList.toggle('hidden',fulfillment==='pickup')});
+payBtn.onclick=async()=>{const err=checkoutError;err.textContent='';const payload={name:custName.value.trim(),phone:custPhone.value.trim(),email:custEmail.value.trim(),address:custAddress.value.trim(),notes:custNotes.value.trim(),fulfillment,marketingOptIn:checkoutMarketing.checked,promo,items:cart.map(x=>({name:x.name,qty:x.qty}))};if(!payload.name||!payload.phone||!payload.email||(fulfillment==='delivery'&&!payload.address)){err.textContent='Complete your name, phone, email and delivery address.';return}payBtn.disabled=true;payBtn.textContent='Opening secure payment…';try{const r=await fetch('/.netlify/functions/create-byl-checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const d=await r.json();if(!r.ok)throw new Error(d.error||'Could not start payment');sessionStorage.setItem('mb_pending_order',JSON.stringify({id:d.order.id,phone:payload.phone}));location.href=d.checkoutUrl}catch(e){err.textContent=e.message;payBtn.disabled=false;payBtn.textContent='Continue to BYL / QPay'}};
+async function lookup(){const id=trackId.value.trim(),phone=trackPhone.value.trim();trackResult.classList.remove('hidden');trackResult.textContent='Checking…';try{const r=await fetch(`/.netlify/functions/order-status?id=${encodeURIComponent(id)}&phone=${encodeURIComponent(phone)}`);const d=await r.json();if(!r.ok)throw new Error(d.error||'Order not found');trackResult.innerHTML=`<div class="track-status">${String(d.status).replaceAll('_',' ').toUpperCase()}</div><p><b>${d.id}</b><br>${d.fulfillment==='pickup'?'Pickup':'Delivery'} • ${fmt(d.total)}</p><div>${d.items.map(x=>`${x.qty} × ${x.name}`).join('<br>')}</div>`}catch(e){trackResult.textContent=e.message}}trackLookup.onclick=lookup;
+signupSubmit.onclick=async()=>{signupMsg.textContent='';const payload={name:signupName.value.trim(),email:signupEmail.value.trim(),consent:signupConsent.checked};if(!payload.email||!payload.consent){signupMsg.textContent='Enter your email and tick the consent box.';return}signupSubmit.disabled=true;try{const r=await fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const d=await r.json();if(!r.ok)throw new Error(d.error||'Could not subscribe');localStorage.setItem('mb_list_joined','1');signupMsg.className='error ok';signupMsg.textContent='You’re on the list.';setTimeout(closeModals,900)}catch(e){signupMsg.textContent=e.message}finally{signupSubmit.disabled=false}};
+function startup(){renderCart();const p=new URLSearchParams(location.search),pending=(()=>{try{return JSON.parse(sessionStorage.getItem('mb_pending_order')||'null')}catch{return null}})();if(p.get('payment')==='success'&&p.get('order')){trackId.value=p.get('order');if(pending?.phone)trackPhone.value=pending.phone;openModal('trackModal');trackResult.classList.remove('hidden');trackResult.innerHTML='<b>Payment returned successfully.</b><br>We are confirming it with BYL now.';setTimeout(lookup,1600);history.replaceState({},'',location.pathname)}else if(p.get('track')){trackId.value=p.get('track');openModal('trackModal')}else if(!localStorage.getItem('mb_list_joined')&&!localStorage.getItem('mb_list_skipped'))setTimeout(()=>openModal('signupModal'),1300)}
+document.querySelector('#signupModal .modalClose').addEventListener('click',()=>localStorage.setItem('mb_list_skipped',String(Date.now())));
+startup();
+</script>
+</body>
+</html>
