@@ -9,7 +9,7 @@ export default async (req) => {
     if (!subject || !heading || !message) return json({error:'Subject, heading and message are required'},400);
     const store = SUBSCRIBERS_STORE();
     const { blobs } = await store.list();
-    const subscribers = (await Promise.all(blobs.map(x=>store.get(x.key,{type:'json',consistency:'strong'})))).filter(x=>x?.active && x?.email);
+    const subscribers = (await Promise.all(blobs.map(x=>store.get(x.key,{type:'json'})))).filter(x=>x?.active && x?.email);
     let sent = 0;
     for (let i=0;i<subscribers.length;i+=10) {
       const batch = subscribers.slice(i,i+10);
