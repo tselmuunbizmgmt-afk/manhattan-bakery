@@ -1,0 +1,21 @@
+[build]
+  publish = "public"
+  command = "echo 'Manhattan Bakery static site + Netlify Functions'"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[redirects]]
+  from = "https://www.manhattanbakery.online/*"
+  to = "https://manhattanbakery.online/:splat"
+  status = 301
+  force = true
