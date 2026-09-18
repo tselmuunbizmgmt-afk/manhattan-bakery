@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Minori ♡</title>
+<style>
+*{box-sizing:border-box} html,body{margin:0;min-height:100%;font-family:Arial,sans-serif}
+body{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;
+  background:radial-gradient(circle at 20% 20%,#ffe0eb 0 14%,transparent 32%),
+             radial-gradient(circle at 80% 80%,#ffd4e4 0 12%,transparent 30%),
+             linear-gradient(135deg,#fffafd,#ffeaf2);
+  color:#6b3f50;padding:20px;
+}
+.card{
+  width:min(92vw,680px);position:relative;z-index:5;text-align:center;
+  background:rgba(255,255,255,.9);padding:42px 28px;border-radius:32px;
+  box-shadow:0 25px 70px rgba(160,60,100,.18);border:1px solid #fff;
+}
+.small{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:#c06f8d}
+h1{font:500 clamp(42px,8vw,70px)/1 Georgia,serif;color:#b3466f;margin:10px 0 20px}
+p{font:17px/1.75 Georgia,serif;max-width:560px;margin:0 auto 28px}
+button{border:0;border-radius:999px;padding:15px 30px;font-size:16px;font-weight:700;cursor:pointer;transition:.2s}
+button:hover{transform:translateY(-2px)}
+.primary{background:#b84770;color:white;box-shadow:0 10px 25px rgba(184,71,112,.25)}
+.no{background:#eee5e9;color:#aaa;cursor:not-allowed;opacity:.55}
+.hidden{display:none}
+.buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.question{font:500 clamp(34px,7vw,56px)/1.15 Georgia,serif;color:#a84367;margin:18px 0 30px}
+.note{font-size:12px;color:#b98397;margin-top:15px}
+.overlay{position:fixed;inset:0;z-index:20;display:grid;place-items:center;background:rgba(93,41,61,.2);backdrop-filter:blur(8px);padding:20px}
+.popup{width:min(90vw,520px);background:white;border-radius:30px;padding:34px 26px;text-align:center;box-shadow:0 25px 70px rgba(103,43,67,.25)}
+.popup h2{font:500 34px Georgia,serif;color:#b3466f;margin:8px 0 15px}
+.heart{position:fixed;bottom:-30px;pointer-events:none;z-index:1;color:#ef7fa6;animation:floatUp linear forwards}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(340deg);opacity:0}}
+.corner{position:fixed;z-index:2;font-size:64px;filter:drop-shadow(0 8px 12px rgba(160,60,100,.12))}
+.c1{top:18px;left:18px}.c2{top:24px;right:22px}.c3{bottom:20px;left:24px}.c4{bottom:18px;right:22px}
+.kitty{position:fixed;z-index:2;width:115px;height:115px}.kitty svg{width:100%;height:100%}
+.k1{left:3vw;top:18vh}.k2{right:3vw;bottom:18vh}
+@media(max-width:700px){.kitty{width:82px;height:82px}.k1{left:1vw;top:12vh}.k2{right:1vw;bottom:10vh}.card{padding:34px 20px}p{font-size:15.5px}}
+</style>
+</head>
+<body>
+<div class="corner c1">🎀</div><div class="corner c2">♡</div><div class="corner c3">♡</div><div class="corner c4">🎀</div>
+<div class="kitty k1"><svg viewBox="0 0 120 120"><path d="M23 48 L21 20 L43 34 M97 48 L99 20 L77 34" fill="white" stroke="#4d3e44" stroke-width="3"/><ellipse cx="60" cy="57" rx="41" ry="34" fill="white" stroke="#4d3e44" stroke-width="3"/><circle cx="46" cy="56" r="3.5" fill="#3b3236"/><circle cx="75" cy="56" r="3.5" fill="#3b3236"/><ellipse cx="60" cy="66" rx="4" ry="3" fill="#f2c443"/><path d="M36 63H20M36 69H18M84 63H100M84 69H102" stroke="#4d3e44" stroke-width="2.5" stroke-linecap="round"/><path d="M78 31 C87 18 99 20 98 31 C97 41 87 42 78 34 C69 42 59 41 59 31 C59 21 69 20 78 31Z" fill="#ff7fa9" stroke="#b84770" stroke-width="2"/><circle cx="78" cy="31" r="6" fill="#ff6f9d" stroke="#b84770" stroke-width="2"/><path d="M60 96 C49 83 36 93 60 110 C84 93 71 83 60 96Z" fill="#ff6f9d"/></svg></div>
+<div class="kitty k2"><svg viewBox="0 0 120 120"><path d="M23 48 L21 20 L43 34 M97 48 L99 20 L77 34" fill="white" stroke="#4d3e44" stroke-width="3"/><ellipse cx="60" cy="57" rx="41" ry="34" fill="white" stroke="#4d3e44" stroke-width="3"/><circle cx="46" cy="56" r="3.5" fill="#3b3236"/><path d="M72 56 Q76 61 81 56" fill="none" stroke="#3b3236" stroke-width="2.5" stroke-linecap="round"/><ellipse cx="60" cy="66" rx="4" ry="3" fill="#f2c443"/><path d="M36 63H20M36 69H18M84 63H100M84 69H102" stroke="#4d3e44" stroke-width="2.5" stroke-linecap="round"/><path d="M78 31 C87 18 99 20 98 31 C97 41 87 42 78 34 C69 42 59 41 59 31 C59 21 69 20 78 31Z" fill="#ff7fa9" stroke="#b84770" stroke-width="2"/><circle cx="78" cy="31" r="6" fill="#ff6f9d" stroke="#b84770" stroke-width="2"/><path d="M60 96 C49 83 36 93 60 110 C84 93 71 83 60 96Z" fill="#ff6f9d"/></svg></div>
+<div class="overlay" id="overlay"><div class="popup"><div style="font-size:40px">🎀 ♡ 🎀</div><h2>Hi, Minori</h2><p>I made something small for you. Read it all the way through, okay?</p><button class="primary" id="openBtn">Open it ♡</button></div></div>
+<div class="card">
+<section id="intro"><div class="small">FOR MINORI ♡</div><h1>Minori</h1><p>From when we first started talking, I trusted the process. You were a little dry at first, but I liked you enough to keep getting to know you, and I’m really glad I did.<br><br>I like you a lot, and I want to continue through every chapter of my life with you. I’m genuinely happy to have you in my life every minute I can, even through our bad times. I still value those moments because they’re moments I get to go through with you.<br><br>Whether it’s a good day, an awkward day, or a day where we disagree, I’m grateful that I still get to talk to you, understand you, laugh with you, and have you in my life. I’m really grateful our paths crossed.</p><button class="primary" id="questionBtn">I have one question… ♡</button></section>
+<section id="question" class="hidden"><div class="small">OKAY… HERE IT IS ♡</div><div class="question">Will you be my girlfriend,<br><em>Minori?</em></div><div class="buttons"><button class="primary" id="yesBtn">YES ♡</button><button class="no" disabled>NO</button></div><div class="note">the “no” button seems to have mysteriously stopped working</div></section>
+<section id="yes" class="hidden"><div style="font-size:74px">♡</div><div class="small">OFFICIALLY OFFICIAL</div><h1>Minori ♡</h1><p>So I guess this is where our next chapter starts.<br><br>I’m really happy it’s with you.</p></section>
+</div>
+<script>
+const intro=document.getElementById('intro'),question=document.getElementById('question'),yes=document.getElementById('yes');
+document.getElementById('openBtn').onclick=()=>document.getElementById('overlay').classList.add('hidden');
+document.getElementById('questionBtn').onclick=()=>{intro.classList.add('hidden');question.classList.remove('hidden')};
+document.getElementById('yesBtn').onclick=()=>{question.classList.add('hidden');yes.classList.remove('hidden');explode()};
+function floatingHeart(){const h=document.createElement('div');h.className='heart';h.textContent=Math.random()>.5?'♥':'♡';h.style.left=Math.random()*100+'vw';h.style.fontSize=(14+Math.random()*26)+'px';h.style.animationDuration=(7+Math.random()*7)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),15000)}setInterval(floatingHeart,500);
+function explode(){for(let i=0;i<45;i++){const h=document.createElement('div');h.textContent=i%2?'♥':'♡';h.style.cssText='position:fixed;left:50%;top:50%;z-index:99;pointer-events:none;color:#ff6f9d;font-size:'+(18+Math.random()*28)+'px';const x=(Math.random()-.5)*900,y=(Math.random()-.5)*700;h.animate([{transform:'translate(-50%,-50%) scale(.6)',opacity:1},{transform:`translate(calc(-50% + ${x}px),calc(-50% + ${y}px)) rotate(${Math.random()*500}deg)`,opacity:0}],{duration:1500+Math.random()*700,easing:'ease-out'});document.body.appendChild(h);setTimeout(()=>h.remove(),2300)}}
+</script>
+</body></html>
