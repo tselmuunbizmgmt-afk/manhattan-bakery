@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Manhattan Bakery Ops</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#080808;color:#f4f0e8;font-family:Arial,Helvetica,sans-serif}.wrap{max-width:1150px;margin:auto;padding:40px 24px}.top{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:28px}h1{font-size:42px;margin:0}.muted{color:#888}.panel{border:1px solid #292929;background:#0f0f0f;border-radius:22px;padding:22px;margin-bottom:18px}.login{max-width:520px;margin:12vh auto}.row{display:flex;gap:10px;flex-wrap:wrap}input,select,textarea{background:#111;border:1px solid #333;color:#fff;border-radius:12px;padding:12px}input{flex:1;min-width:220px}button{border:1px solid #3a3a3a;background:#171717;color:#fff;border-radius:999px;padding:11px 15px;cursor:pointer}.primary{background:#eee9df;color:#080808;border-color:#eee9df;font-weight:700}.orders{display:grid;gap:12px}.order{border:1px solid #272727;background:#0c0c0c;border-radius:18px;padding:18px}.order-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}.order h3{margin:0}.badge{font-size:10px;text-transform:uppercase;letter-spacing:.12em;border:1px solid #333;border-radius:999px;padding:8px 10px}.meta{color:#999;font-size:12px;line-height:1.7;margin:12px 0}.items{color:#ddd;line-height:1.7}.controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.controls select{min-width:190px}.error{color:#d99;margin-top:10px}.ok{color:#b8c9ae}.broadcast textarea{width:100%;min-height:120px;resize:vertical}.broadcast input{width:100%;margin-bottom:8px}
+@media(max-width:700px){.top,.order-head{flex-direction:column}h1{font-size:34px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div id="login" class="panel login"><div class="muted">PRIVATE STAFF AREA</div><h1>Orders</h1><p class="muted">Enter the admin password you set in Netlify.</p><div class="row"><input id="secret" type="password" placeholder="Admin password"><button class="primary" id="loginBtn">Open Dashboard</button></div><div id="loginMsg" class="error"></div></div>
+<div id="app" class="hidden">
+<div class="top"><div><div class="muted">THE MANHATTAN BAKERY</div><h1>Order Dashboard</h1></div><div class="row"><button id="refreshBtn">Refresh</button><button id="logoutBtn">Log out</button></div></div>
+<div class="panel broadcast"><h2>Subscriber announcement</h2><p class="muted">Requires your email provider variables to be configured in Netlify.</p><input id="subject" placeholder="Email subject"><input id="heading" placeholder="Email heading"><textarea id="message" placeholder="Message"></textarea><input id="cta" placeholder="Button text (optional)"><button class="primary" id="sendBroadcast">Send to Subscribers</button><div id="broadcastMsg" class="error"></div></div>
+<div class="panel"><div class="row" style="justify-content:space-between;align-items:center"><h2 style="margin:0">Orders</h2><span id="count" class="muted"></span></div><div id="orders" class="orders" style="margin-top:16px"></div></div>
+</div>
+</div>
+<script>
+const $=id=>document.getElementById(id);let admin=sessionStorage.getItem('mb_admin')||'';
+const money=n=>'₮'+Math.round(n||0).toLocaleString('en-US');
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+async function api(path,opt={}){opt.headers={...(opt.headers||{}),'x-admin-secret':admin};const r=await fetch(path,opt);let d={};try{d=await r.json()}catch{}if(!r.ok)throw new Error(d.error||'Request failed');return d}
+async function load(){try{const d=await api('/.netlify/functions/admin-orders');$('login').classList.add('hidden');$('app').classList.remove('hidden');$('count').textContent=d.orders.length+' orders';$('orders').innerHTML=d.orders.length?'':'<p class="muted">No orders yet.</p>';d.orders.forEach(o=>{const items=(o.items||[]).map(x=>`${x.qty} × ${esc(x.name)} — ${money(x.lineTotal)}`).join('<br>');$('orders').insertAdjacentHTML('beforeend',`<article class="order"><div class="order-head"><div><h3>${esc(o.id)}</h3><div class="meta">${esc(o.name)} • ${esc(o.phone)} • ${esc(o.email)}<br>${o.fulfillment==='delivery'?'Delivery: '+esc(o.address):'Pickup'}<br>Created: ${esc(o.createdAt)}</div></div><span class="badge">${esc(o.paymentStatus||o.status)}</span></div><div class="items">${items}</div><div class="meta">Subtotal ${money(o.subtotal)} • Discount −${money(o.discount)} • <b style="color:#fff">Total ${money(o.total)}</b><br>Notes: ${esc(o.notes||'—')}</div><div class="controls"><select data-id="${esc(o.id)}"><option value="received" ${o.status==='received'?'selected':''}>Received</option><option value="preparing" ${o.status==='preparing'?'selected':''}>Preparing</option><option value="ready" ${o.status==='ready'?'selected':''}>Ready</option><option value="out_for_delivery" ${o.status==='out_for_delivery'?'selected':''}>Out for delivery</option><option value="delivered" ${o.status==='delivered'?'selected':''}>Delivered</option><option value="cancelled" ${o.status==='cancelled'?'selected':''}>Cancelled</option></select><button class="primary update" data-id="${esc(o.id)}">Update Status</button></div></article>`)});document.querySelectorAll('.update').forEach(b=>b.onclick=()=>update(b.dataset.id))}catch(e){$('loginMsg').textContent=e.message;if(e.message.toLowerCase().includes('unauthorized')){sessionStorage.removeItem('mb_admin');admin=''}}}
+async function update(id){const sel=document.querySelector(`select[data-id="${CSS.escape(id)}"]`);try{await api('/.netlify/functions/admin-update-order',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id,status:sel.value})});await load()}catch(e){alert(e.message)}}
+$('loginBtn').onclick=()=>{admin=$('secret').value;sessionStorage.setItem('mb_admin',admin);load()};$('refreshBtn').onclick=load;$('logoutBtn').onclick=()=>{sessionStorage.removeItem('mb_admin');location.reload()};
+$('sendBroadcast').onclick=async()=>{const box=$('broadcastMsg');box.textContent='Sending…';try{const d=await api('/.netlify/functions/admin-broadcast',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({subject:$('subject').value,heading:$('heading').value,message:$('message').value,cta:$('cta').value})});box.className='error ok';box.textContent=`Sent to ${d.sent} of ${d.total} subscribers.`}catch(e){box.className='error';box.textContent=e.message}};
+if(admin)load();
+</script>
+</body>
+</html>
