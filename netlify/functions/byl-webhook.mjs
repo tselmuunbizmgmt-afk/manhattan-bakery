@@ -26,7 +26,7 @@ export default async (req) => {
       if (!id) return json({ ok: true });
 
       const store = ORDERS_STORE();
-      const order = await store.get(id, { type: 'json', consistency: 'strong' });
+      const order = await store.get(id, { type: 'json' });
       if (!order) return json({ ok: true });
 
       if (order.paymentStatus !== 'paid') {
@@ -77,7 +77,7 @@ export default async (req) => {
         const store = ORDERS_STORE();
         const { blobs } = await store.list();
         for (const blob of blobs.slice(-150).reverse()) {
-          const order = await store.get(blob.key, { type: 'json', consistency: 'strong' });
+          const order = await store.get(blob.key, { type: 'json' });
           if (order && String(order.bylCheckoutId) === String(checkoutId)) {
             order.paymentStatus = 'pending_verification';
             order.status = 'pending_verification';
