@@ -9,7 +9,7 @@ export default async (req) => {
     if (!validEmail(email) || body.consent !== true) return json({ error: 'A valid email and consent are required.' }, 400);
     const store = SUBSCRIBERS_STORE();
     const key = subscriberKey(email);
-    const existing = await store.get(key, { type: 'json', consistency: 'strong' });
+    const existing = await store.get(key, { type: 'json' });
     const token = existing?.token || crypto.randomUUID();
     const entry = { email, name, token, active: true, createdAt: existing?.createdAt || new Date().toISOString(), updatedAt: new Date().toISOString(), source: 'welcome-popup' };
     await store.setJSON(key, entry);
