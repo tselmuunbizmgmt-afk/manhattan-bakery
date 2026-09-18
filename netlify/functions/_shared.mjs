@@ -1,8 +1,8 @@
 import { getStore } from '@netlify/blobs';
 
 export const SITE_URL = 'https://manhattanbakery.online';
-export const ORDERS_STORE = () => getStore({ name: 'manhattan-orders', consistency: 'strong' });
-export const SUBSCRIBERS_STORE = () => getStore({ name: 'manhattan-subscribers', consistency: 'strong' });
+export const ORDERS_STORE = () => getStore('manhattan-orders', { consistency: 'strong' });
+export const SUBSCRIBERS_STORE = () => getStore('manhattan-subscribers', { consistency: 'strong' });
 
 export const CATALOG = Object.freeze({
   'Fifth Avenue Blackout': 15900,
